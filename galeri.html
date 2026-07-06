@@ -6,7 +6,18 @@
   <title>Berita - Website Resmi Desa Sei Bamban</title>
   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <style>
-      body { padding-top: 70px; background: #f5f5f5; font-family: Arial, sans-serif; }
+      html, body { height: 100%; }
+      body {
+        padding-top: 70px;
+        background: #f5f5f5;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
+      .container { flex: 1 0 auto; width: 100%; }
+      img { max-width: 100%; height: auto; }
 
       /* ===== NAVBAR ===== */
       .navbar-desa {
@@ -220,6 +231,31 @@
       }
 
       #modalFoto .close:hover { opacity: 1; }
+
+      /* ===== RESPONSIVE / MOBILE ===== */
+      @media (max-width: 767px) {
+        body { padding-top: 55px; }
+        .container { padding-left: 14px; padding-right: 14px; margin-top: 16px !important; }
+
+        .navbar-desa .navbar-brand { font-size: 13px; padding: 6px 12px; }
+        .navbar-desa .navbar-brand span[style*="10px"] { font-size: 9px !important; }
+        .navbar-desa .navbar-nav > li > a { height: auto; padding: 12px 15px; }
+        .navbar-desa .navbar-collapse { background: #1a5c1a; }
+
+        .page-hero { padding: 30px 18px; }
+        .page-hero .glyphicon { font-size: 36px; }
+        .page-hero h1 { font-size: 20px; }
+        .page-hero p { font-size: 13px; }
+
+        .gallery-section { padding: 14px; }
+        .gallery-item { margin-bottom: 14px; }
+        .gallery-thumb-wrap img { height: 130px; }
+        /* di HP overlay & ikon zoom selalu tampil, karena tidak ada hover */
+        .gallery-thumb-wrap .gallery-overlay { opacity: 1; font-size: 10.5px; padding: 14px 8px 6px; }
+        .gallery-thumb-wrap .glyphicon-zoom-in { opacity: 1; }
+
+        .footer-bar { font-size: 11px; padding: 14px 10px; }
+      }
     </style>
   <style>:root { --page-color: #2e8b2e; }
     /* ===== FOOTER BAR ===== */
@@ -231,6 +267,7 @@
       padding: 16px;
       margin-top: 10px;
       border-top: 3px solid #f0a500;
+      flex-shrink: 0;
     }
     .footer-bar a { color: rgba(255,255,255,.8); }
   </style>

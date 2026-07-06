@@ -6,7 +6,19 @@
   <title>Home - Website Resmi Desa Sei Bamban</title>
   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    body { padding-top: 70px; background: #f5f5f5; font-family: Arial, sans-serif; }
+    html, body { height: 100%; }
+    body {
+      padding-top: 70px;
+      background: #f5f5f5;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    .container { flex: 1 0 auto; width: 100%; }
+    .footer-bar { flex-shrink: 0; }
+    img { max-width: 100%; height: auto; }
 
     /* ===== NAVBAR ===== */
     .navbar-desa {
@@ -292,6 +304,51 @@
     @keyframes ticker-scroll {
       0%   { transform: translateX(100%); }
       100% { transform: translateX(-100%); }
+    }
+
+    /* ===== RESPONSIVE / MOBILE ===== */
+    @media (max-width: 767px) {
+      body { padding-top: 55px; }
+      .container { padding-left: 14px; padding-right: 14px; margin-top: 16px !important; }
+
+      /* Navbar brand jangan terlalu lebar & teks jangan overflow */
+      .navbar-desa .navbar-brand { font-size: 13px; padding: 6px 12px; }
+      .navbar-desa .navbar-brand span[style*="10px"] { font-size: 9px !important; }
+      .navbar-desa .navbar-nav > li > a { height: auto; padding: 12px 15px; }
+      .navbar-desa .navbar-collapse { background: #1a5c1a; }
+
+      /* Ticker: matikan animasi & bikin wrap biar gak kepotong aneh */
+      .ticker-wrap { flex-wrap: wrap; padding: 8px 12px; }
+      .ticker-text { animation: none; white-space: normal; font-size: 11.5px; }
+
+      /* Hero banner */
+      .hero-banner { padding: 28px 18px 26px; text-align: left; }
+      .hero-banner h1 { font-size: 21px; }
+      .hero-banner .hero-sub { font-size: 13px; }
+      .hero-banner .hero-address { font-size: 11.5px; }
+      .hero-banner .btn-hero,
+      .hero-banner .btn-hero-outline { display: inline-block; font-size: 12px; padding: 8px 16px; }
+
+      /* Statistik: 2 kolom rapi + angka jangan kepotong */
+      .stat-card { padding: 14px 8px; margin-bottom: 14px; }
+      .stat-card .stat-num { font-size: 19px; word-break: break-word; }
+      .stat-card .stat-icon { font-size: 24px; }
+      .stat-card .stat-label { font-size: 10px; }
+
+      /* Section title */
+      .sec-title { font-size: 15px; }
+      .sec-title small { font-size: 11px; }
+
+      /* News card & layanan spacing lebih rapat */
+      .news-card .news-body { padding: 13px 14px; }
+      .news-card h4 { font-size: 13px; }
+      .layanan-card { padding: 16px 10px; margin-bottom: 14px; }
+
+      /* Kontak panel & maps jangan kepotong */
+      .kontak-panel { padding: 20px 16px; }
+      .kontak-panel iframe { height: 220px; }
+
+      .footer-bar { font-size: 11px; padding: 14px 10px; }
     }
   </style>
   <style>:root { --page-color: #2e8b2e; }</style>

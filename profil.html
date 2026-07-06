@@ -6,7 +6,18 @@
   <title>Profil Desa - Website Resmi Desa Sei Bamban</title>
   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <style>
-      body { padding-top: 70px; background: #f5f5f5; font-family: Arial, sans-serif; }
+      html, body { height: 100%; }
+      body {
+        padding-top: 70px;
+        background: #f5f5f5;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
+      .container { flex: 1 0 auto; width: 100%; }
+      img { max-width: 100%; height: auto; }
 
       /* ===== NAVBAR ===== */
       .navbar-desa {
@@ -119,6 +130,52 @@
 
       .breadcrumb > li + li::before { color: #2e8b2e; }
       .breadcrumb > .active { color: #2e8b2e; font-weight: 600; }
+
+      /* Supaya tabel tidak bikin geser layar di HP, bisa di-scroll sendiri secara horizontal */
+      .panel-body { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+      .panel-body table { min-width: 380px; }
+
+      /* ===== FOOTER BAR ===== */
+      .footer-bar {
+        background: #1a4d1a;
+        color: rgba(255,255,255,.6);
+        text-align: center;
+        font-size: 12px;
+        padding: 16px;
+        margin-top: 10px;
+        border-top: 3px solid #f0a500;
+        flex-shrink: 0;
+      }
+      .footer-bar a { color: rgba(255,255,255,.8); }
+
+      /* ===== RESPONSIVE / MOBILE ===== */
+      @media (max-width: 767px) {
+        body { padding-top: 55px; }
+        .container { padding-left: 14px; padding-right: 14px; margin-top: 16px !important; }
+
+        .navbar-desa .navbar-brand { font-size: 13px; padding: 6px 12px; }
+        .navbar-desa .navbar-brand span[style*="10px"] { font-size: 9px !important; }
+        .navbar-desa .navbar-nav > li > a { height: auto; padding: 12px 15px; }
+        .navbar-desa .navbar-collapse { background: #1a5c1a; }
+
+        .panel-heading { font-size: 13px !important; padding: 11px 14px !important; }
+
+        /* Visi Misi */
+        .nav-tabs > li > a { font-size: 12.5px !important; padding: 9px 14px !important; }
+        div[style*="padding:24px 22px"] { padding: 16px 14px !important; }
+        span[style*="font-size:32px"] { font-size: 24px !important; }
+        p[style*="font-size:15px;font-weight:700"] { font-size: 13.5px !important; }
+        p[style*="font-size:14px;line-height:1.85"],
+        ol[style*="font-size:14px;line-height:2"] { font-size: 12.5px !important; }
+
+        /* Sejarah desa */
+        div[style*="padding:24px 22px;font-size:14px"] { padding: 16px 14px !important; font-size: 12.5px !important; }
+
+        /* Peta */
+        iframe { height: 220px !important; }
+
+        .footer-bar { font-size: 11px; padding: 14px 10px; }
+      }
     </style>
   <style>:root { --page-color: #2e8b2e; }</style>
 </head>
@@ -201,19 +258,6 @@
         <span class="glyphicon glyphicon-th-large" style="margin-right:8px;color:#f0a500;"></span>Struktur Organisasi &amp; Tata Kerja Pemerintah Desa Sei Bamban
       </div>
       <div class="panel-body" style="padding:20px;overflow-x:auto;">
-        <style>
-    /* ===== FOOTER BAR ===== */
-    .footer-bar {
-      background: #1a4d1a;
-      color: rgba(255,255,255,.6);
-      text-align: center;
-      font-size: 12px;
-      padding: 16px;
-      margin-top: 10px;
-      border-top: 3px solid #f0a500;
-    }
-    .footer-bar a { color: rgba(255,255,255,.8); }
-  </style>
 
         <img src="Images/struktur-organisasi.png" alt="Struktur Organisasi dan Tata Kerja Pemerintah Desa Sei Bamban" style="width:100%;height:auto;display:block;border-radius:6px;">
 

@@ -6,7 +6,18 @@
   <title>Infografis - Website Resmi Desa Sei Bamban</title>
   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <style>
-      body { padding-top: 70px; background: #f5f5f5; font-family: Arial, sans-serif; }
+      html, body { height: 100%; }
+      body {
+        padding-top: 70px;
+        background: #f5f5f5;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
+      .container { flex: 1 0 auto; width: 100%; }
+      img { max-width: 100%; height: auto; }
 
       /* ===== NAVBAR ===== */
       .navbar-desa {
@@ -119,6 +130,43 @@
 
       .breadcrumb > li + li::before { color: #2e8b2e; }
       .breadcrumb > .active { color: #2e8b2e; font-weight: 600; }
+
+      /* Supaya tabel tidak bikin geser layar di HP, bisa di-scroll sendiri secara horizontal */
+      .panel-body { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+      .panel-body table { min-width: 380px; }
+
+      /* ===== RESPONSIVE / MOBILE ===== */
+      @media (max-width: 767px) {
+        body { padding-top: 55px; }
+        .container { padding-left: 14px; padding-right: 14px; margin-top: 16px !important; }
+
+        .navbar-desa .navbar-brand { font-size: 13px; padding: 6px 12px; }
+        .navbar-desa .navbar-brand span[style*="10px"] { font-size: 9px !important; }
+        .navbar-desa .navbar-nav > li > a { height: auto; padding: 12px 15px; }
+        .navbar-desa .navbar-collapse { background: #1a5c1a; }
+
+        .page-hero { padding: 30px 18px; }
+        .page-hero .glyphicon { font-size: 36px; }
+        .page-hero h1 { font-size: 20px; }
+        .page-hero p { font-size: 13px; }
+
+        /* Tab pills penduduk/APBDes */
+        .nav-pills > li > a { font-size: 11.5px !important; padding: 8px 12px !important; }
+
+        /* Stat cards atas: teks jangan kepotong */
+        .row [style*="padding:20px 14px"],
+        .row [style*="padding:22px 18px"] { padding: 12px 6px !important; }
+        .row [style*="font-size:28px"],
+        .row [style*="font-size:26px"] { font-size: 20px !important; }
+        .row [style*="font-size:22px;font-weight:700"] { font-size: 15px !important; }
+        .row [style*="font-size:18px;font-weight:700"] { font-size: 14px !important; }
+        .row [style*="font-size:11px;font-weight:700"] { font-size: 9px !important; }
+        .row [style*="font-size:12px;color:#888"] { font-size: 10px !important; }
+
+        .panel-heading { font-size: 13px !important; padding: 11px 14px !important; }
+
+        .footer-bar { font-size: 11px; padding: 14px 10px; }
+      }
     </style>
   <style>:root { --page-color: #2e8b2e; }
     /* ===== FOOTER BAR ===== */
@@ -130,6 +178,7 @@
       padding: 16px;
       margin-top: 10px;
       border-top: 3px solid #f0a500;
+      flex-shrink: 0;
     }
     .footer-bar a { color: rgba(255,255,255,.8); }
     

@@ -6,7 +6,18 @@
   <title>PPID - Website Resmi Desa Sei Bamban</title>
   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    body { padding-top: 70px; background: #f5f5f5; font-family: Arial, sans-serif; }
+    html, body { height: 100%; }
+    body {
+      padding-top: 70px;
+      background: #f5f5f5;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    .container { flex: 1 0 auto; width: 100%; }
+    img { max-width: 100%; height: auto; }
 
     /* ===== NAVBAR ===== */
     .navbar-desa {
@@ -231,8 +242,49 @@
       padding: 16px;
       margin-top: 10px;
       border-top: 3px solid #f0a500;
+      flex-shrink: 0;
     }
     .footer-bar a { color: rgba(255,255,255,.8); }
+
+    /* ===== RESPONSIVE / MOBILE ===== */
+    @media (max-width: 767px) {
+      body { padding-top: 55px; }
+      .container { padding-left: 14px; padding-right: 14px; margin-top: 16px !important; }
+
+      .navbar-desa .navbar-brand { font-size: 13px; padding: 6px 12px; }
+      .navbar-desa .navbar-brand span[style*="10px"] { font-size: 9px !important; }
+      .navbar-desa .navbar-nav > li > a { height: auto; padding: 12px 15px; }
+      .navbar-desa .navbar-collapse { background: #1a5c1a; }
+
+      .page-hero { padding: 26px 16px; }
+      .page-hero .glyphicon { font-size: 34px; }
+      .page-hero h1 { font-size: 20px; }
+      .page-hero p { font-size: 12.5px; }
+
+      .sec-title { font-size: 14.5px; }
+      .sec-title small { font-size: 11px; }
+
+      .hukum-panel { padding: 4px 16px; }
+      .hukum-panel li { font-size: 12px; padding: 12px 0; }
+
+      .pejabat-card { padding: 18px 12px; }
+      .pejabat-card .glyphicon { width: 50px; height: 50px; line-height: 50px; font-size: 24px; }
+      .pejabat-card h5 { font-size: 13.5px; }
+
+      .info-card .info-body { padding: 15px 14px; }
+      .info-card h4 { font-size: 13.5px; }
+      .info-card p { font-size: 12px; }
+
+      .cta-panel { padding: 24px 18px; }
+      .cta-panel h3 { font-size: 16px; }
+      .cta-panel p { font-size: 12.5px; }
+      .cta-panel .btn-hero,
+      .cta-panel .btn-hero-outline { font-size: 12px; padding: 8px 16px; }
+
+      .kontak-panel { padding: 18px 16px; }
+
+      .footer-bar { font-size: 11px; padding: 14px 10px; }
+    }
   </style>
   <style>:root { --page-color: #1e6b1e; }</style>
 </head>
