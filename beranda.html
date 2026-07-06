@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home - Website Resmi Desa Sei Bamban</title>
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { padding-top: 70px; background: #f5f5f5; font-family: Arial, sans-serif; }
+
+    /* ===== NAVBAR ===== */
+    .navbar-desa {
+      background: #1e6b1e;
+      border: none;
+      border-bottom: 3px solid #f0a500;
+      margin-bottom: 0;
+      min-height: 55px;
+    }
+    .navbar-desa .navbar-brand {
+      color: #fff !important;
+      font-size: 15px;
+      font-weight: 700;
+      padding: 8px 15px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      height: 55px;
+    }
+    .navbar-desa .navbar-brand img {
+      width: 38px; height: 38px;
+      object-fit: contain;
+      border-radius: 50%;
+      background: #fff;
+      padding: 2px;
+      vertical-align: middle;
+    }
+    .navbar-desa .navbar-nav > li > a {
+      color: rgba(255,255,255,0.88) !important;
+      font-size: 12.5px;
+      font-weight: 600;
+      padding: 18px 12px;
+      height: 55px;
+      border-right: 1px solid rgba(255,255,255,0.08);
+      transition: background 0.18s;
+    }
+    .navbar-desa .navbar-nav > li > a > .glyphicon { margin-right: 5px; font-size: 13px; }
+    .navbar-desa .navbar-nav > li > a:hover,
+    .navbar-desa .navbar-nav > li.active > a,
+    .navbar-desa .navbar-nav > li.active > a:focus {
+      background: #f0a500 !important; color: #fff !important;
+    }
+    .navbar-desa .navbar-nav > li.open > a { background: #f0a500 !important; color: #fff !important; }
+    .navbar-desa .dropdown-menu {
+      background: #1a5c1a; border: none;
+      border-top: 3px solid #f0a500;
+      border-radius: 0 0 6px 6px;
+      padding: 4px 0; min-width: 210px;
+      box-shadow: 0 6px 18px rgba(0,0,0,.25);
+    }
+    .navbar-desa .dropdown-menu > li > a {
+      color: rgba(255,255,255,.88) !important;
+      font-size: 12.5px; padding: 9px 18px;
+      border-bottom: 1px solid rgba(255,255,255,.06);
+      transition: background .15s, padding-left .15s;
+    }
+    .navbar-desa .dropdown-menu > li > a:hover {
+      background: #f0a500 !important; color: #fff !important; padding-left: 26px;
+    }
+    .navbar-desa .navbar-toggle { border-color: rgba(255,255,255,.4); margin-top: 10px; }
+    .navbar-desa .navbar-toggle .icon-bar { background: #fff; }
+
+    /* ===== HERO BANNER ===== */
+    .hero-banner {
+      background: linear-gradient(135deg, #1e6b1e 0%, #2e8b2e 55%, #1a5c1a 100%);
+      color: #fff;
+      padding: 52px 30px 44px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 18px rgba(30,107,30,.25);
+    }
+    .hero-banner::before {
+      content: '';
+      position: absolute;
+      top: -30px; right: -30px;
+      width: 220px; height: 220px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.05);
+    }
+    .hero-banner::after {
+      content: '';
+      position: absolute;
+      bottom: -50px; left: -40px;
+      width: 280px; height: 280px;
+      border-radius: 50%;
+      background: rgba(240,165,0,.07);
+    }
+    .hero-banner .hero-logo {
+      width: 80px; height: 80px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.15);
+      border: 3px solid rgba(255,255,255,.4);
+      object-fit: contain;
+      padding: 6px;
+      margin-bottom: 16px;
+    }
+    .hero-banner h1 { font-size: 26px; font-weight: 700; margin-bottom: 6px; }
+    .hero-banner .hero-sub {
+      font-size: 14px; color: rgba(255,255,255,.78);
+      margin-bottom: 14px; line-height: 1.7;
+    }
+    .hero-banner .hero-address {
+      font-size: 12.5px; color: rgba(255,255,255,.65);
+      margin-bottom: 20px;
+    }
+    .hero-banner .hero-address .glyphicon { margin-right: 5px; color: #f0a500; }
+    .hero-banner .btn-hero {
+      background: #f0a500; color: #fff;
+      font-weight: 700; font-size: 13px;
+      border: none; border-radius: 5px;
+      padding: 9px 22px;
+      margin-right: 8px; margin-bottom: 8px;
+      transition: background .18s, transform .12s;
+    }
+    .hero-banner .btn-hero:hover { background: #d4920a; transform: translateY(-1px); }
+    .hero-banner .btn-hero-outline {
+      background: transparent; color: #fff;
+      font-weight: 600; font-size: 13px;
+      border: 2px solid rgba(255,255,255,.55);
+      border-radius: 5px;
+      padding: 8px 20px;
+      margin-bottom: 8px;
+      transition: background .18s, border-color .18s;
+    }
+    .hero-banner .btn-hero-outline:hover { background: rgba(255,255,255,.12); border-color: #fff; }
+
+    /* ===== STATISTIK ===== */
+    .stat-card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 20px 16px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,.07);
+      border-top: 4px solid #1e6b1e;
+      margin-bottom: 20px;
+      transition: transform .15s, box-shadow .15s;
+    }
+    .stat-card:hover { transform: translateY(-3px); box-shadow: 0 6px 18px rgba(0,0,0,.12); }
+    .stat-card .stat-icon { font-size: 30px; color: #1e6b1e; margin-bottom: 8px; display: block; }
+    .stat-card .stat-num { font-size: 28px; font-weight: 700; color: #1a4d1a; line-height: 1; }
+    .stat-card .stat-label { font-size: 11.5px; color: #888; margin-top: 5px; font-weight: 600; text-transform: uppercase; letter-spacing: .4px; }
+    .stat-card .stat-sub { font-size: 11px; color: #aaa; margin-top: 3px; }
+
+    /* ===== SECTION TITLE ===== */
+    .sec-title {
+      font-size: 17px; font-weight: 700;
+      color: #1a4d1a;
+      border-left: 4px solid #f0a500;
+      padding-left: 12px;
+      margin-bottom: 18px;
+      margin-top: 6px;
+    }
+    .sec-title small { display: block; font-size: 12px; color: #888; font-weight: 400; margin-top: 2px; }
+
+    /* ===== PENGUMUMAN / BERITA ===== */
+    .news-card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,.07);
+      margin-bottom: 18px;
+      overflow: hidden;
+      border-left: 4px solid #1e6b1e;
+      transition: box-shadow .15s;
+    }
+    .news-card:hover { box-shadow: 0 5px 16px rgba(0,0,0,.12); transform: translateY(-2px); }
+    .news-card { display: block; text-decoration: none; color: inherit; }
+    .news-card .news-body { padding: 16px 18px; }
+    .news-card .news-link { display: block; margin-top: 10px; font-size: 11.5px; font-weight: 700; color: #1e6b1e; }
+    .news-card .news-link .glyphicon { font-size: 9px; margin-left: 3px; transition: margin-left .15s; }
+    .news-card:hover .news-link .glyphicon { margin-left: 6px; }
+    .news-card[style*="1a6aaa"] .news-link { color: #1a6aaa; }
+    .news-card .news-badge {
+      display: inline-block;
+      background: #e8f5e8; color: #1e6b1e;
+      font-size: 10px; font-weight: 700;
+      border-radius: 3px; padding: 2px 8px;
+      text-transform: uppercase; letter-spacing: .5px;
+      margin-bottom: 7px;
+    }
+    .news-card .news-badge.badge-warning { background: #fff7e0; color: #b87b00; }
+    .news-card .news-badge.badge-info { background: #e0f0ff; color: #1a6aaa; }
+    .news-card h4 { font-size: 14px; font-weight: 700; color: #222; margin: 0 0 6px; line-height: 1.5; }
+    .news-card p { font-size: 12.5px; color: #666; margin: 0 0 8px; line-height: 1.7; }
+    .news-card .news-date { font-size: 11px; color: #aaa; }
+    .news-card .news-date .glyphicon { margin-right: 4px; }
+
+    /* ===== LAYANAN ===== */
+    .layanan-card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 22px 16px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,.07);
+      margin-bottom: 20px;
+      border-bottom: 3px solid #1e6b1e;
+      cursor: pointer;
+      transition: transform .15s, box-shadow .15s;
+    }
+    .layanan-card:hover { transform: translateY(-3px); box-shadow: 0 6px 18px rgba(0,0,0,.13); }
+    .layanan-card .glyphicon { font-size: 32px; color: #1e6b1e; margin-bottom: 10px; display: block; }
+    .layanan-card h5 { font-size: 13px; font-weight: 700; color: #1a4d1a; margin: 0 0 5px; }
+    .layanan-card p { font-size: 11.5px; color: #888; margin: 0; line-height: 1.6; }
+
+    /* ===== AGENDA ===== */
+    .agenda-item {
+      background: #fff;
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin-bottom: 12px;
+      box-shadow: 0 1px 6px rgba(0,0,0,.07);
+      display: flex; gap: 14px; align-items: flex-start;
+    }
+    .agenda-date {
+      background: #1e6b1e; color: #fff;
+      border-radius: 6px;
+      text-align: center;
+      padding: 8px 12px;
+      min-width: 48px;
+      flex-shrink: 0;
+    }
+    .agenda-date .day { font-size: 20px; font-weight: 700; line-height: 1; }
+    .agenda-date .month { font-size: 9.5px; text-transform: uppercase; letter-spacing: .5px; color: #f0a500; margin-top: 2px; }
+    .agenda-info h5 { font-size: 13.5px; font-weight: 700; color: #222; margin: 0 0 4px; }
+    .agenda-info p { font-size: 12px; color: #888; margin: 0; }
+
+    /* ===== KONTAK ===== */
+    .kontak-panel {
+      background: linear-gradient(135deg, #1e6b1e, #2e8b2e);
+      color: #fff;
+      border-radius: 10px;
+      padding: 30px 28px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 14px rgba(30,107,30,.2);
+    }
+    .kontak-panel h3 { font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 18px; }
+    .kontak-panel h3 .glyphicon { color: #f0a500; margin-right: 8px; }
+    .kontak-item { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 14px; }
+    .kontak-item .glyphicon { color: #f0a500; font-size: 16px; margin-top: 2px; flex-shrink: 0; }
+    .kontak-item .kontak-text { font-size: 13.5px; color: rgba(255,255,255,.9); line-height: 1.6; }
+    .kontak-item .kontak-label { font-size: 10.5px; color: rgba(255,255,255,.55); display: block; text-transform: uppercase; letter-spacing: .4px; }
+
+    /* ===== FOOTER BAR ===== */
+    .footer-bar {
+      background: #1a4d1a;
+      color: rgba(255,255,255,.6);
+      text-align: center;
+      font-size: 12px;
+      padding: 16px;
+      margin-top: 10px;
+      border-top: 3px solid #f0a500;
+    }
+    .footer-bar a { color: rgba(255,255,255,.8); }
+
+    /* ===== TICKER PENGUMUMAN ===== */
+    .ticker-wrap {
+      background: #1a4d1a;
+      border-radius: 6px;
+      padding: 10px 16px;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      overflow: hidden;
+    }
+    .ticker-label {
+      background: #f0a500;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      border-radius: 4px;
+      padding: 3px 10px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .ticker-text {
+      color: rgba(255,255,255,.85);
+      font-size: 12.5px;
+      white-space: nowrap;
+      animation: ticker-scroll 28s linear infinite;
+    }
+    @keyframes ticker-scroll {
+      0%   { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+  </style>
+  <style>:root { --page-color: #2e8b2e; }</style>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar navbar-desa navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-main" aria-expanded="false">
+          <span class="sr-only">Toggle Nav</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="beranda.html">
+          <img src="Images/logo.jpg" alt="Logo">
+          <span style="line-height:1.2">
+            <span style="display:block;font-size:14px;font-weight:700">Desa Sei Bamban</span>
+            <span style="display:block;font-size:10px;font-weight:400;color:rgba(255,255,255,.65)">Kec. Batang Serangan, Kab. Langkat</span>
+          </span>
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-main">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="beranda.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+          <li><a href="profil.html"><span class="glyphicon glyphicon-user"></span> Profil Desa</a></li>
+          <li><a href="infografis.html"><span class="glyphicon glyphicon-stats"></span> Infografis</a></li>
+          <li><a href="idm.html"><span class="glyphicon glyphicon-flag"></span> IDM</a></li>
+          <li><a href="galeri.html"><span class="glyphicon glyphicon-picture"></span> Galeri</a></li>
+          <li><a href="ppid.html"><span class="glyphicon glyphicon-info-sign"></span> PPID</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container" style="margin-top:30px;">
+
+    <!-- ===== TICKER ===== -->
+    <div class="ticker-wrap">
+      <span class="ticker-label">&#128276; INFO</span>
+      <div style="overflow:hidden;flex:1;">
+        <span class="ticker-text">
+          Selamat datang di Website Resmi Desa Sei Bamban &nbsp;&#10022;&nbsp;
+          Alokasi Dana Desa Tahun 2025 sebesar Rp 71 Triliun &nbsp;&#10022;&nbsp;
+          Kantor Desa buka Senin–Jumat pukul 08.00–16.00 WIB &nbsp;&#10022;&nbsp;
+          Untuk pelayanan administrasi, harap membawa KTP dan KK &nbsp;&#10022;&nbsp;
+          Pembangunan infrastruktur desa terus berjalan — pantau terus di website ini
+        </span>
+      </div>
+    </div>
+
+    <!-- ===== HERO BANNER ===== -->
+    <div class="hero-banner">
+      <div class="row">
+        <div class="col-sm-8 col-xs-12">
+          <img src="Images/logo.jpg" alt="Logo Desa" class="hero-logo">
+          <h1>Desa Sei Bamban</h1>
+          <p class="hero-sub">
+            Selamat datang di Website Resmi Pemerintahan Desa Sei Bamban.<br>
+            Kami hadir untuk memberikan layanan informasi yang transparan, akuntabel, dan mudah diakses oleh seluruh masyarakat.
+          </p>
+          <p class="hero-address">
+            <span class="glyphicon glyphicon-map-marker"></span>
+            Jl. Besar Batang Serangan, Dusun Titi Belanga &mdash; Kecamatan Batang Serangan, Kabupaten Langkat, Sumatera Utara 20883
+          </p>
+          <a href="profil.html" class="btn-hero">
+            <span class="glyphicon glyphicon-user"></span> Profil Desa
+          </a>
+          <a href="https://seibamban.id" target="_blank" class="btn-hero-outline">
+            <span class="glyphicon glyphicon-new-window"></span> seibamban.id
+          </a>
+        </div>
+        <div class="col-sm-4 hidden-xs" style="text-align:right;padding-top:20px;">
+          <div style="background:rgba(255,255,255,.08);border-radius:10px;padding:18px 16px;display:inline-block;min-width:160px;">
+            <div style="font-size:11px;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Kode Desa</div>
+            <div style="font-size:20px;font-weight:700;color:#f0a500;letter-spacing:1px;">1205192002</div>
+            <hr style="border-color:rgba(255,255,255,.15);margin:12px 0;">
+            <div style="font-size:11px;color:rgba(255,255,255,.6);margin-bottom:4px;">Kepala Desa</div>
+            <div style="font-size:13.5px;font-weight:700;">RUDI ARIYANTO</div>
+            <hr style="border-color:rgba(255,255,255,.15);margin:12px 0;">
+            <div style="font-size:11px;color:rgba(255,255,255,.6);margin-bottom:4px;">Sekretaris Desa</div>
+            <div style="font-size:13.5px;font-weight:700;">ANDRI IRAWAN</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== STATISTIK DESA ===== -->
+    <p class="sec-title"><span class="glyphicon glyphicon-stats" style="color:#f0a500;margin-right:8px;"></span>Statistik Desa <small>Data kependudukan & wilayah Desa Sei Bamban</small></p>
+    <div class="row">
+      <div class="col-xs-6 col-sm-3">
+        <div class="stat-card">
+          <span class="glyphicon glyphicon-user stat-icon"></span>
+          <div class="stat-num">10.006,91 per KM</div>
+          <div class="stat-label">Total Penduduk</div>
+          <div class="stat-sub">jiwa terdaftar</div>
+        </div>
+      </div>
+      <div class="col-xs-6 col-sm-3">
+        <div class="stat-card" style="border-top-color:#f0a500;">
+          <span class="glyphicon glyphicon-home stat-icon" style="color:#f0a500;"></span>
+          <div class="stat-num">3124</div>
+          <div class="stat-label">Kepala Keluarga</div>
+          <div class="stat-sub">KK aktif</div>
+        </div>
+      </div>
+      <div class="col-xs-6 col-sm-3">
+        <div class="stat-card" style="border-top-color:#1a6aaa;">
+          <span class="glyphicon glyphicon-th stat-icon" style="color:#1a6aaa;"></span>
+          <div class="stat-num">17</div>
+          <div class="stat-label">Dusun</div>
+          <div class="stat-sub">wilayah dusun</div>
+        </div>
+      </div>
+      <div class="col-xs-6 col-sm-3">
+        <div class="stat-card" style="border-top-color:#c0392b;">
+          <span class="glyphicon glyphicon-globe stat-icon" style="color:#c0392b;"></span>
+          <div class="stat-num">± 1.149,20 ha</div>
+          <div class="stat-label">Luas Wilayah</div>
+          <div class="stat-sub">km² total</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== BERITA & LAYANAN (2 kolom) ===== -->
+    <div class="row" style="margin-top:10px;">
+
+      <!-- Kiri: Berita & Pengumuman -->
+      <div class="col-sm-7">
+        <p class="sec-title"><span class="glyphicon glyphicon-bullhorn" style="color:#f0a500;margin-right:8px;"></span>Berita &amp; Pengumuman <small>Informasi terbaru dari pemerintah desa</small></p>
+
+        <a class="news-card" href="https://djpk.kemenkeu.go.id/?p=59813" target="_blank" rel="noopener">
+          <div class="news-body">
+            <span class="news-badge badge-warning">Pengumuman</span>
+            <h4>Penggunaan Dana Desa Tahun 2025 Telah Ditetapkan</h4>
+            <p>Pemerintah telah menetapkan alokasi Dana Desa dalam APBN tahun 2025 sebesar Rp 71 Triliun. Penggunaan dana desa diarahkan untuk pembangunan infrastruktur, pemberdayaan masyarakat, dan pengembangan desa digital.</p>
+            <span class="news-date"><span class="glyphicon glyphicon-calendar"></span>Juni 2025</span>
+            <span class="news-link">Baca selengkapnya <span class="glyphicon glyphicon-chevron-right"></span></span>
+          </div>
+        </a>
+
+        <a class="news-card" href="https://www.airmerah.desa.id/artikel/2021/4/24/dana-desa-dd-dan-alokasi-dana-desa-add-simak-perbedaannya" target="_blank" rel="noopener">
+          <div class="news-body">
+            <span class="news-badge">Informasi</span>
+            <h4>Perbedaan Dana Desa (DD) dan Alokasi Dana Desa (ADD)</h4>
+            <p>Istilah Dana Desa (DD) dan Alokasi Dana Desa (ADD) seringkali membingungkan. Meski mirip dalam nama, keduanya memiliki sumber, mekanisme, dan peruntukan yang berbeda. Pelajari perbedaannya di sini.</p>
+            <span class="news-date"><span class="glyphicon glyphicon-calendar"></span>Mei 2025</span>
+            <span class="news-link">Baca selengkapnya <span class="glyphicon glyphicon-chevron-right"></span></span>
+          </div>
+        </a>
+
+        <a class="news-card" style="border-left-color:#1a6aaa;" href="https://kompaspedia.kompas.id/baca/profil/tokoh/menteri-desa-dan-pembangunan-daerah-tertinggal-yandri-susanto" target="_blank" rel="noopener">
+          <div class="news-body">
+            <span class="news-badge badge-info">Pemerintahan</span>
+            <h4>Profil Yandri Susanto, Menteri Desa yang Dilantik Presiden Prabowo</h4>
+            <p>Presiden Prabowo Subianto menunjuk Yandri Susanto sebagai Menteri Desa dan Pembangunan Daerah Tertinggal. Kenali lebih jauh sosok menteri baru yang akan mengelola program pembangunan desa seluruh Indonesia.</p>
+            <span class="news-date"><span class="glyphicon glyphicon-calendar"></span>Oktober 2024</span>
+            <span class="news-link" style="color:#1a6aaa;">Baca selengkapnya <span class="glyphicon glyphicon-chevron-right"></span></span>
+          </div>
+        </a>
+
+        <a class="news-card" href="https://djpk.kemenkeu.go.id/?p=57440" target="_blank" rel="noopener">
+          <div class="news-body">
+            <span class="news-badge badge-warning">APBN 2025</span>
+            <h4>Kementerian Keuangan Rilis Pagu Dana Desa Rp 71 Triliun</h4>
+            <p>Kementerian Keuangan RI resmi merilis pagu Dana Desa tahun 2025. Kebijakan ini bertujuan mendukung pembangunan dan pemberdayaan masyarakat desa di seluruh Indonesia, termasuk Desa Sei Bamban.</p>
+            <span class="news-date"><span class="glyphicon glyphicon-calendar"></span>September 2024</span>
+            <span class="news-link">Baca selengkapnya <span class="glyphicon glyphicon-chevron-right"></span></span>
+          </div>
+        </a>
+
+        <p style="text-align:right;margin-top:-5px;">
+          <a href="https://seibamban.id/artikel" target="_blank" style="color:#1e6b1e;font-size:12.5px;font-weight:600;">
+            Lihat semua berita <span class="glyphicon glyphicon-chevron-right"></span>
+          </a>
+        </p>
+      </div>
+
+      <!-- Kanan: Layanan & Agenda -->
+      <div class="col-sm-5">
+
+        <!-- Layanan Desa -->
+        <p class="sec-title"><span class="glyphicon glyphicon-th-large" style="color:#f0a500;margin-right:8px;"></span>Layanan Desa <small>Administrasi &amp; pelayanan masyarakat</small></p>
+        <div class="row">
+          <div class="col-xs-6">
+            <div class="layanan-card">
+              <span class="glyphicon glyphicon-file"></span>
+              <h5>Surat Keterangan</h5>
+              <p>Domisili, usaha, tidak mampu, dll.</p>
+            </div>
+          </div>
+          <div class="col-xs-6">
+            <div class="layanan-card">
+              <span class="glyphicon glyphicon-tags"></span>
+              <h5>Data Penduduk</h5>
+              <p>KTP, KK, akta kelahiran</p>
+            </div>
+          </div>
+          <div class="col-xs-6">
+            <div class="layanan-card">
+              <span class="glyphicon glyphicon-usd"></span>
+              <h5>Informasi APBDes</h5>
+              <p>Anggaran &amp; realisasi desa</p>
+            </div>
+          </div>
+          <div class="col-xs-6">
+            <div class="layanan-card">
+              <span class="glyphicon glyphicon-flag"></span>
+              <h5>IDM Desa</h5>
+              <p>Indeks Desa Membangun</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Agenda -->
+        <p class="sec-title" style="margin-top:6px;"><span class="glyphicon glyphicon-calendar" style="color:#f0a500;margin-right:8px;"></span>Agenda Kegiatan <small>Jadwal kegiatan desa bulan ini</small></p>
+
+        <div class="agenda-item">
+          <div class="agenda-date">
+            <div class="day">25</div>
+            <div class="month">Jun</div>
+          </div>
+          <div class="agenda-info">
+            <h5>Musrenbang Desa Semester II</h5>
+            <p><span class="glyphicon glyphicon-map-marker"></span> Balai Desa Sei Bamban &nbsp;|&nbsp; 09.00 WIB</p>
+          </div>
+        </div>
+
+        <div class="agenda-item">
+          <div class="agenda-date" style="background:#f0a500;">
+            <div class="day">28</div>
+            <div class="month">Jun</div>
+          </div>
+          <div class="agenda-info">
+            <h5>Pembagian BLT Dana Desa</h5>
+            <p><span class="glyphicon glyphicon-map-marker"></span> Kantor Desa &nbsp;|&nbsp; 08.00 WIB</p>
+          </div>
+        </div>
+
+        <div class="agenda-item">
+          <div class="agenda-date" style="background:#1a6aaa;">
+            <div class="day">05</div>
+            <div class="month">Jul</div>
+          </div>
+          <div class="agenda-info">
+            <h5>Posyandu Rutin Balita &amp; Lansia</h5>
+            <p><span class="glyphicon glyphicon-map-marker"></span> Posyandu Dusun I &nbsp;|&nbsp; 08.30 WIB</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===== POTENSI DESA ===== -->
+    <p class="sec-title" style="margin-top:16px;">
+      <span class="glyphicon glyphicon-leaf" style="color:#f0a500;margin-right:8px;"></span>Potensi Desa
+      <small>Unggulan dan potensi Desa Sei Bamban</small>
+    </p>
+    <div class="row">
+      <div class="col-sm-3 col-xs-6">
+        <div class="stat-card" style="border-top-color:#2e7d32;">
+          <span class="glyphicon glyphicon-leaf stat-icon" style="color:#2e7d32;"></span>
+          <div style="font-size:14px;font-weight:700;color:#1a4d1a;">Pertanian</div>
+          <div class="stat-sub">Sawah &amp; ladang produktif</div>
+        </div>
+      </div>
+      <div class="col-sm-3 col-xs-6">
+        <div class="stat-card" style="border-top-color:#6d4c41;">
+          <span class="glyphicon glyphicon-tree-deciduous stat-icon" style="color:#6d4c41;"></span>
+          <div style="font-size:14px;font-weight:700;color:#1a4d1a;">Perkebunan</div>
+          <div class="stat-sub">Kelapa sawit &amp; karet</div>
+        </div>
+      </div>
+      <div class="col-sm-3 col-xs-6">
+        <div class="stat-card" style="border-top-color:#0277bd;">
+          <span class="glyphicon glyphicon-tint stat-icon" style="color:#0277bd;"></span>
+          <div style="font-size:14px;font-weight:700;color:#1a4d1a;">Sungai Bamban</div>
+          <div class="stat-sub">Sumber air &amp; identitas desa</div>
+        </div>
+      </div>
+      <div class="col-sm-3 col-xs-6">
+        <div class="stat-card" style="border-top-color:#f57f17;">
+          <span class="glyphicon glyphicon-shopping-cart stat-icon" style="color:#f57f17;"></span>
+          <div style="font-size:14px;font-weight:700;color:#1a4d1a;">UMKM</div>
+          <div class="stat-sub">Usaha mikro warga</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== KONTAK ===== -->
+    <div class="kontak-panel" style="margin-top:10px;">
+      <div class="row">
+        <div class="col-sm-6">
+          <h3><span class="glyphicon glyphicon-phone-alt"></span> Hubungi Kami</h3>
+          <div class="kontak-item">
+            <span class="glyphicon glyphicon-map-marker"></span>
+            <div class="kontak-text">
+              <span class="kontak-label">Alamat Kantor</span>
+              Jl. Besar Batang Serangan, Dusun Titi Belanga,<br>
+              Desa Sei Bamban, Kec. Batang Serangan,<br>
+              Kab. Langkat, Sumatera Utara &mdash; 20883
+            </div>
+          </div>
+          <div class="kontak-item">
+            <span class="glyphicon glyphicon-time"></span>
+            <div class="kontak-text">
+              <span class="kontak-label">Jam Pelayanan</span>
+              Senin &ndash; Jumat: 08.00 &ndash; 16.00 WIB<br>
+              Sabtu &ndash; Minggu: Libur
+            </div>
+          </div>
+          <div class="kontak-item">
+            <span class="glyphicon glyphicon-globe"></span>
+            <div class="kontak-text">
+              <span class="kontak-label">Website Resmi</span>
+              <a href="https://seibamban.id" target="_blank" style="color:#f0a500;">seibamban.id</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <iframe
+            src="https://maps.google.com/maps?q=Desa+Sei+Bamban+Batang+Serangan+Langkat&output=embed"
+            width="100%" height="300" frameborder="0"
+            style="border:0;display:block;border-radius:8px;margin-top:6px;"
+            allowfullscreen loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /container -->
+
+  <!-- ===== FOOTER ===== -->
+  <div class="footer-bar">
+    &copy; 2025 Pemerintah Desa Sei Bamban &mdash; Kecamatan Batang Serangan, Kabupaten Langkat, Sumatera Utara
+    &nbsp;|&nbsp;
+    <a href="https://seibamban.id" target="_blank">seibamban.id</a>
+  </div>
+
+  <script src="bootstrap/js/jQuery.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

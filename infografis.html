@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Infografis - Website Resmi Desa Sei Bamban</title>
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      body { padding-top: 70px; background: #f5f5f5; font-family: Arial, sans-serif; }
+
+      /* ===== NAVBAR ===== */
+      .navbar-desa {
+        background: #1e6b1e;
+        border: none;
+        border-bottom: 3px solid #f0a500;
+        margin-bottom: 0;
+        min-height: 55px;
+      }
+
+      .navbar-desa .navbar-brand {
+        color: #fff !important;
+        font-size: 15px;
+        font-weight: 700;
+        padding: 8px 15px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        height: 55px;
+      }
+
+      .navbar-desa .navbar-brand img {
+        width: 38px;
+        height: 38px;
+        object-fit: contain;
+        border-radius: 50%;
+        background: #fff;
+        padding: 2px;
+        vertical-align: middle;
+      }
+
+      .navbar-desa .navbar-nav > li > a {
+        color: rgba(255,255,255,0.88) !important;
+        font-size: 12.5px;
+        font-weight: 600;
+        padding: 18px 12px;
+        height: 55px;
+        border-right: 1px solid rgba(255,255,255,0.08);
+        transition: background 0.18s;
+      }
+
+      .navbar-desa .navbar-nav > li > a > .glyphicon {
+        margin-right: 5px;
+        font-size: 13px;
+      }
+
+      .navbar-desa .navbar-nav > li > a:hover,
+      .navbar-desa .navbar-nav > li.active > a,
+      .navbar-desa .navbar-nav > li.active > a:focus {
+        background: #f0a500 !important;
+        color: #fff !important;
+      }
+
+      .navbar-desa .navbar-nav > li.open > a {
+        background: #f0a500 !important;
+        color: #fff !important;
+      }
+
+      /* Dropdown */
+      .navbar-desa .dropdown-menu {
+        background: #1a5c1a;
+        border: none;
+        border-top: 3px solid #f0a500;
+        border-radius: 0 0 6px 6px;
+        padding: 4px 0;
+        min-width: 210px;
+        box-shadow: 0 6px 18px rgba(0,0,0,.25);
+      }
+
+      .navbar-desa .dropdown-menu > li > a {
+        color: rgba(255,255,255,.88) !important;
+        font-size: 12.5px;
+        padding: 9px 18px;
+        border-bottom: 1px solid rgba(255,255,255,.06);
+        transition: background .15s, padding-left .15s;
+      }
+
+      .navbar-desa .dropdown-menu > li > a:hover {
+        background: #f0a500 !important;
+        color: #fff !important;
+        padding-left: 26px;
+      }
+
+      /* Mobile toggle */
+      .navbar-desa .navbar-toggle { border-color: rgba(255,255,255,.4); margin-top: 10px; }
+      .navbar-desa .navbar-toggle .icon-bar { background: #fff; }
+
+      /* ===== PAGE HERO ===== */
+      .page-hero {
+        background: #fff;
+        border-radius: 8px;
+        padding: 50px 30px;
+        text-align: center;
+        box-shadow: 0 2px 10px rgba(0,0,0,.08);
+        border-top: 5px solid var(--page-color, #1e6b1e);
+        margin-bottom: 30px;
+      }
+
+      .page-hero .glyphicon { font-size: 48px; color: var(--page-color, #1e6b1e); margin-bottom: 14px; display: block; }
+      .page-hero h1 { font-size: 26px; font-weight: 700; color: var(--page-color, #1e6b1e); margin-bottom: 10px; }
+      .page-hero p { font-size: 14px; color: #888; max-width: 540px; margin: 0 auto 16px; line-height: 1.8; }
+
+      .breadcrumb {
+        background: #f0f7f0;
+        border-radius: 4px;
+        font-size: 12px;
+        margin-bottom: 20px;
+        padding: 8px 16px;
+      }
+
+      .breadcrumb > li + li::before { color: #2e8b2e; }
+      .breadcrumb > .active { color: #2e8b2e; font-weight: 600; }
+    </style>
+  <style>:root { --page-color: #2e8b2e; }
+    /* ===== FOOTER BAR ===== */
+    .footer-bar {
+      background: #1a4d1a;
+      color: rgba(255,255,255,.6);
+      text-align: center;
+      font-size: 12px;
+      padding: 16px;
+      margin-top: 10px;
+      border-top: 3px solid #f0a500;
+    }
+    .footer-bar a { color: rgba(255,255,255,.8); }
+    
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-desa navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-main" aria-expanded="false">
+          <span class="sr-only">Toggle Nav</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="beranda.html">
+          <img src="Images/logo.jpg" alt="Logo"><span style="line-height:1.2"><span style="display:block;font-size:14px;font-weight:700">Desa Sei Bamban</span><span style="display:block;font-size:10px;font-weight:400;color:rgba(255,255,255,.65)">Kec. Batang Serangan, Kab. Langkat</span></span>
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-main">
+        <ul class="nav navbar-nav">
+            <li><a href="beranda.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+            <li><a href="profil.html"><span class="glyphicon glyphicon-user"></span> Profil Desa</a></li>
+            <li class="active"><a href="infografis.html"><span class="glyphicon glyphicon-stats"></span> Infografis</a></li>
+            <li><a href="idm.html"><span class="glyphicon glyphicon-flag"></span> IDM</a></li>
+            <li><a href="galeri.html"><span class="glyphicon glyphicon-picture"></span> Galeri</a></li>
+            <li><a href="ppid.html"><span class="glyphicon glyphicon-info-sign"></span> PPID</a></li>
+        </ul>
+        
+      </div>
+    </div>
+  </nav>
+
+  <div class="container" style="margin-top:30px;">
+
+    <ol class="breadcrumb">
+      <li><a href="beranda.html">Home</a></li>
+      <li class="active">Infografis</li>
+    </ol>
+
+    <!-- ===== TAB NAVIGASI ===== -->
+    <ul class="nav nav-pills" style="margin-bottom:24px;border-bottom:2px solid #1e6b1e;padding-bottom:0;">
+      <li class="active" style="margin-bottom:-2px;">
+        <a href="#tab-penduduk" data-toggle="tab" style="border-radius:6px 6px 0 0;background:#1e6b1e;color:#fff;font-weight:700;font-size:13px;">
+          <span class="glyphicon glyphicon-user" style="margin-right:5px;"></span>Penduduk
+        </a>
+      </li>
+      <li style="margin-bottom:-2px;">
+        <a href="#tab-apbdes" data-toggle="tab" style="border-radius:6px 6px 0 0;color:#1e6b1e;font-weight:700;font-size:13px;">
+          <span class="glyphicon glyphicon-usd" style="margin-right:5px;"></span>APBDes
+        </a>
+      </li>
+    </ul>
+
+    <!-- ===== TAB CONTENT ===== -->
+    <div class="tab-content">
+
+      <!-- ============================================================ -->
+      <!-- TAB PENDUDUK -->
+      <!-- ============================================================ -->
+      <div class="tab-pane active" id="tab-penduduk">
+
+        <!-- Stat Cards -->
+        <div class="row" style="margin-bottom:24px;">
+          <div class="col-xs-6 col-sm-3" style="margin-bottom:12px;">
+            <div style="background:#fff;border-radius:8px;padding:20px 14px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,.08);border-top:4px solid #1e6b1e;">
+              <span class="glyphicon glyphicon-user" style="font-size:28px;color:#1e6b1e;display:block;margin-bottom:8px;"></span>
+              <div style="font-size:22px;font-weight:700;color:#1e6b1e;">10.006,91 per KM</div>
+              <div style="font-size:12px;color:#888;margin-top:4px;">Total Penduduk</div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3" style="margin-bottom:12px;">
+            <div style="background:#fff;border-radius:8px;padding:20px 14px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,.08);border-top:4px solid #2e8b2e;">
+              <span class="glyphicon glyphicon-male" style="font-size:28px;color:#2e8b2e;display:block;margin-bottom:8px;"></span>
+              <div style="font-size:22px;font-weight:700;color:#2e8b2e;">5576</div>
+              <div style="font-size:12px;color:#888;margin-top:4px;">Laki-laki</div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3" style="margin-bottom:12px;">
+            <div style="background:#fff;border-radius:8px;padding:20px 14px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,.08);border-top:4px solid #f0a500;">
+              <span class="glyphicon glyphicon-female" style="font-size:28px;color:#f0a500;display:block;margin-bottom:8px;"></span>
+              <div style="font-size:22px;font-weight:700;color:#f0a500;">5939</div>
+              <div style="font-size:12px;color:#888;margin-top:4px;">Perempuan</div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3" style="margin-bottom:12px;">
+            <div style="background:#fff;border-radius:8px;padding:20px 14px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,.08);border-top:4px solid #5a9a5a;">
+              <span class="glyphicon glyphicon-home" style="font-size:28px;color:#5a9a5a;display:block;margin-bottom:8px;"></span>
+              <div style="font-size:22px;font-weight:700;color:#5a9a5a;">3124</div>
+              <div style="font-size:12px;color:#888;margin-top:4px;">Kepala Keluarga</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row: Pendidikan & Pekerjaan -->
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="panel panel-default" style="border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:28px;">
+              <div class="panel-heading" style="background:#1e6b1e;color:#fff;font-size:15px;font-weight:700;padding:13px 20px;">
+                <span class="glyphicon glyphicon-education" style="margin-right:8px;color:#f0a500;"></span>Berdasarkan Pendidikan
+              </div>
+              <div class="panel-body" style="padding:0;">
+                <table class="table" style="margin:0;font-size:13px;">
+                  <thead><tr style="background:#f0f7f0;">
+                    <th style="padding:9px 16px;color:#555;">Tingkat Pendidikan</th>
+                    <th style="padding:9px 16px;color:#555;text-align:right;">Jumlah</th>
+                  </tr></thead>
+                  <tbody>
+                    <tr><td style="padding:9px 16px;color:#555;">Tidak bersekolah</td><td style="padding:9px 16px;text-align:right;font-weight:600;">2577</td></tr>
+                    <tr><td style="padding:9px 16px;color:#555;">Tamat SD/Sederajat</td><td style="padding:9px 16px;text-align:right;font-weight:600;">210</td></tr>
+                    <tr><td style="padding:9px 16px;color:#555;">Tamat SMP/Sederajat</td><td style="padding:9px 16px;text-align:right;font-weight:600;">1.001</td></tr>
+                    <tr><td style="padding:9px 16px;color:#555;">Tamat SMA/Sederajat</td><td style="padding:9px 16px;text-align:right;font-weight:600;">3.046</td></tr>
+                    <tr><td style="padding:9px 16px;color:#555;">Sarjana/Sederajat</td><td style="padding:9px 16px;text-align:right;font-weight:600;">565</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="panel panel-default" style="border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:28px;">
+              <div class="panel-heading" style="background:#1e6b1e;color:#fff;font-size:15px;font-weight:700;padding:13px 20px;">
+                <span class="glyphicon glyphicon-briefcase" style="margin-right:8px;color:#f0a500;"></span>Berdasarkan Pekerjaan
+              </div>
+              <div class="panel-body" style="padding:0;">
+                <table class="table" style="margin:0;font-size:13px;">
+                  <thead><tr style="background:#f0f7f0;">
+                    <th style="padding:9px 16px;color:#555;">Jenis Pekerjaan</th>
+                    <th style="padding:9px 16px;color:#555;text-align:right;">Jumlah</th>
+                  </tr></thead>
+                  <tbody>
+                    <tr><td style="padding:9px 16px;color:#555;">Petani/Pekebun</td><td style="padding:9px 16px;text-align:right;font-weight:600;">270</td></tr>
+                    <tr><td style="padding:9px 16px;color:#555;">Wiraswasta</td><td style="padding:9px 16px;text-align:right;font-weight:600;">1389</td></tr>
+                    <tr><td style="padding:9px 16px;color:#555;">Karyawan Swasta</td><td style="padding:9px 16px;text-align:right;font-weight:600;">700</td></tr>
+                    <tr><td style="padding:9px 16px;color:#555;">PNS / TNI / Polri</td><td style="padding:9px 16px;text-align:right;font-weight:600;">189</td></tr>
+                    <tr><td style="padding:9px 16px;color:#555;">Belum/Tidak Bekerja</td><td style="padding:9px 16px;text-align:right;font-weight:600;">—</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row: Agama & Usia -->
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="panel panel-default" style="border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:28px;">
+              <div class="panel-heading" style="background:#1e6b1e;color:#fff;font-size:15px;font-weight:700;padding:13px 20px;">
+                <span class="glyphicon glyphicon-heart" style="margin-right:8px;color:#f0a500;"></span>Berdasarkan Agama
+              </div>
+              <div class="panel-body" style="padding:0;">
+                <table class="table" style="margin:0;font-size:13px;">
+                  <thead><tr style="background:#f0f7f0;">
+                    <th style="padding:9px 16px;color:#555;">Agama</th>
+                    <th style="padding:9px 16px;color:#555;text-align:right;">Jumlah</th>
+                  </tr></thead>
+                  <tbody>
+                    <tr><td style="padding:9px 16px;color:#555;">Islam</td><td style="padding:9px 16px;text-align:right;font-weight:600;">11.275</td></tr>
+                    <tr><td style="padding:9px 16px;color:#555;">Kristen</td><td style="padding:9px 16px;text-align:right;font-weight:600;">39</td></tr>
+                    <tr><td style="padding:9px 16px;color:#555;">Katolik</td><td style="padding:9px 16px;text-align:right;font-weight:600;">—</td></tr>
+                    <tr><td style="padding:9px 16px;color:#555;">Hindu</td><td style="padding:9px 16px;text-align:right;font-weight:600;">—</td></tr>
+                    <tr><td style="padding:9px 16px;color:#555;">Buddha / Lainnya</td><td style="padding:9px 16px;text-align:right;font-weight:600;">11</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="panel panel-default" style="border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:28px;">
+              <div class="panel-heading" style="background:#1e6b1e;color:#fff;font-size:15px;font-weight:700;padding:13px 20px;">
+                <span class="glyphicon glyphicon-calendar" style="margin-right:8px;color:#f0a500;"></span>Berdasarkan Kelompok Usia
+              </div>
+              <div class="panel-body" style="padding:0;">
+                <table class="table" style="margin:0;font-size:13px;">
+                  <thead><tr style="background:#f0f7f0;">
+                    <th style="padding:9px 16px;color:#555;">Kelompok Umur</th>
+                    <th style="padding:9px 16px;color:#555;text-align:right;">Jumlah</th>
+                  </tr></thead>
+                  <tbody>
+                    <tr><td style="padding:9px 16px;color:#555;">3 – 6 tahun</td><td style="padding:9px 16px;text-align:right;font-weight:600;">666</td></tr>
+                    <tr><td style="padding:9px 16px;color:#555;">7 – 18 tahun</td><td style="padding:9px 16px;text-align:right;font-weight:600;">1.659</td></tr>
+                    <tr><td style="padding:9px 16px;color:#555;">18 – 56 tahun</td><td style="padding:9px 16px;text-align:right;font-weight:600;">3.750</td></tr>
+                    <tr><td style="padding:9px 16px;color:#555;">56 – 64 tahun</td><td style="padding:9px 16px;text-align:right;font-weight:600;">230</td></tr>
+                    <tr><td style="padding:9px 16px;color:#555;">65 tahun ke atas</td><td style="padding:9px 16px;text-align:right;font-weight:600;">132</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /tab-penduduk -->
+
+      <!-- ============================================================ -->
+      <!-- TAB APBDes -->
+      <!-- ============================================================ -->
+      <div class="tab-pane" id="tab-apbdes">
+
+        <!-- Ringkasan Pendapatan & Belanja -->
+        <div class="row" style="margin-bottom:24px;">
+          <div class="col-sm-4" style="margin-bottom:12px;">
+            <div style="background:#fff;border-radius:8px;padding:22px 18px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,.08);border-top:4px solid #1e6b1e;">
+              <span class="glyphicon glyphicon-arrow-up" style="font-size:26px;color:#1e6b1e;display:block;margin-bottom:8px;"></span>
+              <div style="font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:.5px;">Pendapatan Desa</div>
+              <div style="font-size:18px;font-weight:700;color:#1e6b1e;margin-top:6px;">Rp —</div>
+            </div>
+          </div>
+          <div class="col-sm-4" style="margin-bottom:12px;">
+            <div style="background:#fff;border-radius:8px;padding:22px 18px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,.08);border-top:4px solid #c0392b;">
+              <span class="glyphicon glyphicon-arrow-down" style="font-size:26px;color:#c0392b;display:block;margin-bottom:8px;"></span>
+              <div style="font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:.5px;">Belanja Desa</div>
+              <div style="font-size:18px;font-weight:700;color:#c0392b;margin-top:6px;">Rp —</div>
+            </div>
+          </div>
+          <div class="col-sm-4" style="margin-bottom:12px;">
+            <div style="background:#fff;border-radius:8px;padding:22px 18px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,.08);border-top:4px solid #f0a500;">
+              <span class="glyphicon glyphicon-resize-horizontal" style="font-size:26px;color:#f0a500;display:block;margin-bottom:8px;"></span>
+              <div style="font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:.5px;">Pembiayaan</div>
+              <div style="font-size:18px;font-weight:700;color:#f0a500;margin-top:6px;">Rp —</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rincian APBDes -->
+        <div class="panel panel-default" style="border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:28px;">
+          <div class="panel-heading" style="background:#1e6b1e;color:#fff;font-size:15px;font-weight:700;padding:13px 20px;">
+            <span class="glyphicon glyphicon-usd" style="margin-right:8px;color:#f0a500;"></span>Rincian APB Desa Sei Bamban
+          </div>
+          <div class="panel-body" style="padding:0;">
+            <table class="table" style="margin:0;font-size:13px;">
+              <thead><tr style="background:#f0f7f0;">
+                <th style="padding:9px 16px;color:#555;width:55%;">Uraian</th>
+                <th style="padding:9px 16px;color:#555;text-align:right;">Anggaran</th>
+              </tr></thead>
+              <tbody>
+                <tr style="background:#f9fdf9;">
+                  <td colspan="2" style="padding:9px 16px;font-weight:700;color:#1e6b1e;font-size:12.5px;">
+                    <span class="glyphicon glyphicon-arrow-up" style="margin-right:5px;"></span>PENDAPATAN
+                  </td>
+                </tr>
+                <tr><td style="padding:8px 16px 8px 28px;color:#555;">Pendapatan Asli Desa (PADes)</td><td style="padding:8px 16px;text-align:right;font-weight:600;">Rp —</td></tr>
+                <tr><td style="padding:8px 16px 8px 28px;color:#555;">Dana Desa (DD)</td><td style="padding:8px 16px;text-align:right;font-weight:600;">Rp —</td></tr>
+                <tr><td style="padding:8px 16px 8px 28px;color:#555;">Alokasi Dana Desa (ADD)</td><td style="padding:8px 16px;text-align:right;font-weight:600;">Rp —</td></tr>
+                <tr><td style="padding:8px 16px 8px 28px;color:#555;">Bagi Hasil Pajak & Retribusi</td><td style="padding:8px 16px;text-align:right;font-weight:600;">Rp —</td></tr>
+                <tr><td style="padding:8px 16px 8px 28px;color:#555;">Bantuan Keuangan</td><td style="padding:8px 16px;text-align:right;font-weight:600;">Rp —</td></tr>
+
+                <tr style="background:#fdf8f0;">
+                  <td colspan="2" style="padding:9px 16px;font-weight:700;color:#c0392b;font-size:12.5px;">
+                    <span class="glyphicon glyphicon-arrow-down" style="margin-right:5px;"></span>BELANJA
+                  </td>
+                </tr>
+                <tr><td style="padding:8px 16px 8px 28px;color:#555;">Penyelenggaraan Pemerintahan</td><td style="padding:8px 16px;text-align:right;font-weight:600;">Rp —</td></tr>
+                <tr><td style="padding:8px 16px 8px 28px;color:#555;">Pelaksanaan Pembangunan</td><td style="padding:8px 16px;text-align:right;font-weight:600;">Rp —</td></tr>
+                <tr><td style="padding:8px 16px 8px 28px;color:#555;">Pembinaan Kemasyarakatan</td><td style="padding:8px 16px;text-align:right;font-weight:600;">Rp —</td></tr>
+                <tr><td style="padding:8px 16px 8px 28px;color:#555;">Pemberdayaan Masyarakat</td><td style="padding:8px 16px;text-align:right;font-weight:600;">Rp —</td></tr>
+                <tr><td style="padding:8px 16px 8px 28px;color:#555;">Penanggulangan Bencana & Darurat</td><td style="padding:8px 16px;text-align:right;font-weight:600;">Rp —</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div><!-- /tab-apbdes -->
+
+    </div><!-- /tab-content -->
+  </div>
+
+  
+  <!-- ===== FOOTER ===== -->
+  <div class="footer-bar">
+    &copy; 2025 Pemerintah Desa Sei Bamban &mdash; Kecamatan Batang Serangan, Kabupaten Langkat, Sumatera Utara
+    &nbsp;|&nbsp;
+    <a href="https://seibamban.id" target="_blank">seibamban.id</a>
+  </div>
+
+  <script src="bootstrap/js/jQuery.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

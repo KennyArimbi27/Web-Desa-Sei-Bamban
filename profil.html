@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Profil Desa - Website Resmi Desa Sei Bamban</title>
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      body { padding-top: 70px; background: #f5f5f5; font-family: Arial, sans-serif; }
+
+      /* ===== NAVBAR ===== */
+      .navbar-desa {
+        background: #1e6b1e;
+        border: none;
+        border-bottom: 3px solid #f0a500;
+        margin-bottom: 0;
+        min-height: 55px;
+      }
+
+      .navbar-desa .navbar-brand {
+        color: #fff !important;
+        font-size: 15px;
+        font-weight: 700;
+        padding: 8px 15px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        height: 55px;
+      }
+
+      .navbar-desa .navbar-brand img {
+        width: 38px;
+        height: 38px;
+        object-fit: contain;
+        border-radius: 50%;
+        background: #fff;
+        padding: 2px;
+        vertical-align: middle;
+      }
+
+      .navbar-desa .navbar-nav > li > a {
+        color: rgba(255,255,255,0.88) !important;
+        font-size: 12.5px;
+        font-weight: 600;
+        padding: 18px 12px;
+        height: 55px;
+        border-right: 1px solid rgba(255,255,255,0.08);
+        transition: background 0.18s;
+      }
+
+      .navbar-desa .navbar-nav > li > a > .glyphicon {
+        margin-right: 5px;
+        font-size: 13px;
+      }
+
+      .navbar-desa .navbar-nav > li > a:hover,
+      .navbar-desa .navbar-nav > li.active > a,
+      .navbar-desa .navbar-nav > li.active > a:focus {
+        background: #f0a500 !important;
+        color: #fff !important;
+      }
+
+      .navbar-desa .navbar-nav > li.open > a {
+        background: #f0a500 !important;
+        color: #fff !important;
+      }
+
+      /* Dropdown */
+      .navbar-desa .dropdown-menu {
+        background: #1a5c1a;
+        border: none;
+        border-top: 3px solid #f0a500;
+        border-radius: 0 0 6px 6px;
+        padding: 4px 0;
+        min-width: 210px;
+        box-shadow: 0 6px 18px rgba(0,0,0,.25);
+      }
+
+      .navbar-desa .dropdown-menu > li > a {
+        color: rgba(255,255,255,.88) !important;
+        font-size: 12.5px;
+        padding: 9px 18px;
+        border-bottom: 1px solid rgba(255,255,255,.06);
+        transition: background .15s, padding-left .15s;
+      }
+
+      .navbar-desa .dropdown-menu > li > a:hover {
+        background: #f0a500 !important;
+        color: #fff !important;
+        padding-left: 26px;
+      }
+
+      /* Mobile toggle */
+      .navbar-desa .navbar-toggle { border-color: rgba(255,255,255,.4); margin-top: 10px; }
+      .navbar-desa .navbar-toggle .icon-bar { background: #fff; }
+
+      /* ===== PAGE HERO ===== */
+      .page-hero {
+        background: #fff;
+        border-radius: 8px;
+        padding: 50px 30px;
+        text-align: center;
+        box-shadow: 0 2px 10px rgba(0,0,0,.08);
+        border-top: 5px solid var(--page-color, #1e6b1e);
+        margin-bottom: 30px;
+      }
+
+      .page-hero .glyphicon { font-size: 48px; color: var(--page-color, #1e6b1e); margin-bottom: 14px; display: block; }
+      .page-hero h1 { font-size: 26px; font-weight: 700; color: var(--page-color, #1e6b1e); margin-bottom: 10px; }
+      .page-hero p { font-size: 14px; color: #888; max-width: 540px; margin: 0 auto 16px; line-height: 1.8; }
+
+      .breadcrumb {
+        background: #f0f7f0;
+        border-radius: 4px;
+        font-size: 12px;
+        margin-bottom: 20px;
+        padding: 8px 16px;
+      }
+
+      .breadcrumb > li + li::before { color: #2e8b2e; }
+      .breadcrumb > .active { color: #2e8b2e; font-weight: 600; }
+    </style>
+  <style>:root { --page-color: #2e8b2e; }</style>
+</head>
+<body>
+
+  <nav class="navbar navbar-desa navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-main" aria-expanded="false">
+          <span class="sr-only">Toggle Nav</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="beranda.html">
+          <img src="Images/logo.jpg" alt="Logo"><span style="line-height:1.2"><span style="display:block;font-size:14px;font-weight:700">Desa Sei Bamban</span><span style="display:block;font-size:10px;font-weight:400;color:rgba(255,255,255,.65)">Kec. Batang Serangan, Kab. Langkat</span></span>
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-main">
+        <ul class="nav navbar-nav">
+            <li><a href="beranda.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+            <li class="active"><a href="profil.html"><span class="glyphicon glyphicon-user"></span> Profil Desa</a></li>
+            <li><a href="infografis.html"><span class="glyphicon glyphicon-stats"></span> Infografis</a></li>
+            <li><a href="idm.html"><span class="glyphicon glyphicon-flag"></span> IDM</a></li>
+            <li><a href="galeri.html"><span class="glyphicon glyphicon-picture"></span> Galeri </a></li>
+            <li><a href="ppid.html"><span class="glyphicon glyphicon-info-sign"></span> PPID</a></li>
+        </ul>
+        
+      </div>
+    </div>
+  </nav>
+
+  <div class="container" style="margin-top:30px;">
+    <!-- ===== VISI & MISI ===== -->
+    <div class="panel panel-default" style="border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:28px;">
+      <div class="panel-heading" style="background:#1e6b1e;color:#fff;font-size:15px;font-weight:700;padding:13px 20px;">
+        <span class="glyphicon glyphicon-bullseye" style="margin-right:8px;color:#f0a500;"></span>Visi &amp; Misi
+      </div>
+      <div class="panel-body" style="padding:0;">
+        <!-- Tab nav -->
+        <ul class="nav nav-tabs" id="vmTab" style="margin:0;border-bottom:2px solid #d4e4d4;background:#f9fdf9;">
+          <li class="active"><a href="#tab-visi" data-toggle="tab" style="font-weight:600;color:#1e6b1e;border-radius:0;">Visi</a></li>
+          <li><a href="#tab-misi" data-toggle="tab" style="font-weight:600;color:#555;border-radius:0;">Misi</a></li>
+        </ul>
+        <div class="tab-content" style="padding:24px 22px;">
+          <div class="tab-pane active" id="tab-visi">
+            <div style="display:flex;align-items:flex-start;gap:16px;">
+              <span class="glyphicon glyphicon-eye-open" style="font-size:32px;color:#1e6b1e;flex-shrink:0;margin-top:4px;"></span>
+              <div>
+                <p style="font-size:15px;font-weight:700;color:#1a4d1a;margin-bottom:8px;">Visi Desa Sei Bamban</p>
+                <p style="font-size:14px;line-height:1.85;color:#374237;background:#f0f7f0;border-left:4px solid #1e6b1e;padding:12px 16px;border-radius:0 6px 6px 0;font-style:italic;">
+                  "Terwujudnya Desa Sei Bamban yang maju, mandiri, sejahtera, dan berkeadilan berlandaskan iman dan taqwa serta berwawasan lingkungan."
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="tab-misi">
+            <div style="display:flex;align-items:flex-start;gap:16px;">
+              <span class="glyphicon glyphicon-list-alt" style="font-size:32px;color:#1e6b1e;flex-shrink:0;margin-top:4px;"></span>
+              <div style="flex:1;">
+                <p style="font-size:15px;font-weight:700;color:#1a4d1a;margin-bottom:12px;">Misi Desa Sei Bamban</p>
+                <ol style="font-size:14px;line-height:2;color:#374237;padding-left:18px;">
+                  <li>Meningkatkan kualitas sumber daya manusia melalui pendidikan dan kesehatan yang merata dan berkualitas.</li>
+                  <li>Mengembangkan potensi ekonomi desa berbasis pertanian, perkebunan, dan UMKM untuk meningkatkan kesejahteraan masyarakat.</li>
+                  <li>Mewujudkan tata kelola pemerintahan desa yang baik, transparan, akuntabel, dan partisipatif.</li>
+                  <li>Meningkatkan kualitas sarana dan prasarana desa untuk mendukung aktivitas masyarakat.</li>
+                  <li>Mengembangkan kehidupan sosial budaya yang harmonis dan berlandaskan nilai-nilai keagamaan.</li>
+                  <li>Menjaga dan melestarikan lingkungan hidup demi keberlanjutan generasi mendatang.</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== STRUKTUR ORGANISASI ===== -->
+    <div class="panel panel-default" style="border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:28px;">
+      <div class="panel-heading" style="background:#1e6b1e;color:#fff;font-size:15px;font-weight:700;padding:13px 20px;">
+        <span class="glyphicon glyphicon-th-large" style="margin-right:8px;color:#f0a500;"></span>Struktur Organisasi &amp; Tata Kerja Pemerintah Desa Sei Bamban
+      </div>
+      <div class="panel-body" style="padding:20px;overflow-x:auto;">
+        <style>
+    /* ===== FOOTER BAR ===== */
+    .footer-bar {
+      background: #1a4d1a;
+      color: rgba(255,255,255,.6);
+      text-align: center;
+      font-size: 12px;
+      padding: 16px;
+      margin-top: 10px;
+      border-top: 3px solid #f0a500;
+    }
+    .footer-bar a { color: rgba(255,255,255,.8); }
+  </style>
+
+        <img src="Images/struktur-organisasi.png" alt="Struktur Organisasi dan Tata Kerja Pemerintah Desa Sei Bamban" style="width:100%;height:auto;display:block;border-radius:6px;">
+
+      </div>
+    </div>
+
+    <!-- ===== SEJARAH DESA ===== -->
+    <div class="panel panel-default" style="border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:28px;">
+      <div class="panel-heading" style="background:#1e6b1e;color:#fff;font-size:15px;font-weight:700;padding:13px 20px;">
+        <span class="glyphicon glyphicon-book" style="margin-right:8px;color:#f0a500;"></span>Sejarah Desa
+      </div>
+      <div class="panel-body" style="padding:24px 22px;font-size:14px;line-height:1.9;color:#374237;">
+        <p>Desa Sei Bamban merupakan salah satu desa yang berada di wilayah Kecamatan Batang Serangan, Kabupaten Langkat, Provinsi Sumatera Utara. Nama <strong>"Sei Bamban"</strong> berasal dari nama sungai yang mengalir di kawasan ini, yang pada masa lalu dikenal sebagai sumber kehidupan dan identitas masyarakat setempat.</p>
+        <p>Seiring perkembangan zaman, Desa Sei Bamban terus berkembang menjadi desa yang mandiri dan produktif. Masyarakatnya mayoritas bermata pencaharian di bidang pertanian dan perkebunan, memanfaatkan potensi alam yang ada di sekitar wilayah desa.</p>
+        <p>Kantor Pemerintahan Desa Sei Bamban beralamat di <strong>Jl. Besar Batang Serangan, Dusun Titi Belanga</strong>. Desa ini terus berbenah dalam rangka meningkatkan kesejahteraan masyarakat serta mewujudkan tata kelola pemerintahan desa yang baik, transparan, dan akuntabel.</p>
+        <p style="margin-top:4px;">
+          <a href="https://seibamban.id/artikel/2024/6/18/sejarah-desa" target="_blank" style="color:#1e6b1e;font-size:12.5px;font-weight:600;">
+            <span class="glyphicon glyphicon-new-window"></span> Baca selengkapnya di seibamban.id
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- ===== GEOGRAFIS & IDENTITAS ===== -->
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="panel panel-default" style="border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:28px;">
+          <div class="panel-heading" style="background:#1e6b1e;color:#fff;font-size:15px;font-weight:700;padding:13px 20px;">
+            <span class="glyphicon glyphicon-globe" style="margin-right:8px;color:#f0a500;"></span>Geografis Desa
+          </div>
+          <div class="panel-body" style="padding:0;">
+            <table class="table" style="margin:0;font-size:13.5px;">
+              <tbody>
+                <tr><td style="color:#777;width:45%;padding:10px 16px;">Kecamatan</td><td style="font-weight:600;padding:10px 16px;">Batang Serangan</td></tr>
+                <tr><td style="color:#777;padding:10px 16px;">Kabupaten</td><td style="font-weight:600;padding:10px 16px;">Langkat</td></tr>
+                <tr><td style="color:#777;padding:10px 16px;">Provinsi</td><td style="font-weight:600;padding:10px 16px;">Sumatera Utara</td></tr>
+                <tr><td style="color:#777;padding:10px 16px;">Kode Pos</td><td style="font-weight:600;padding:10px 16px;">20883</td></tr>
+                <tr><td style="color:#777;padding:10px 16px;">Kode Desa</td><td style="font-weight:600;padding:10px 16px;">1205192002</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="panel panel-default" style="border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:28px;">
+          <div class="panel-heading" style="background:#1e6b1e;color:#fff;font-size:15px;font-weight:700;padding:13px 20px;">
+            <span class="glyphicon glyphicon-map-marker" style="margin-right:8px;color:#f0a500;"></span>Batas Wilayah
+          </div>
+          <div class="panel-body" style="padding:0;">
+            <table class="table" style="margin:0;font-size:13.5px;">
+              <tbody>
+                <tr>
+                  <td style="padding:10px 16px;"><span style="display:inline-block;background:#1e6b1e;color:#fff;border-radius:4px;font-size:10px;font-weight:700;padding:2px 7px;margin-right:6px;">U</span><span style="color:#777;">Utara</span></td>
+                  <td style="font-weight:600;padding:10px 16px;">Kec. Batang Serangan</td>
+                </tr>
+                <tr>
+                  <td style="padding:10px 16px;"><span style="display:inline-block;background:#1e6b1e;color:#fff;border-radius:4px;font-size:10px;font-weight:700;padding:2px 7px;margin-right:6px;">T</span><span style="color:#777;">Timur</span></td>
+                  <td style="font-weight:600;padding:10px 16px;">Kab. Langkat</td>
+                </tr>
+                <tr>
+                  <td style="padding:10px 16px;"><span style="display:inline-block;background:#1e6b1e;color:#fff;border-radius:4px;font-size:10px;font-weight:700;padding:2px 7px;margin-right:6px;">S</span><span style="color:#777;">Selatan</span></td>
+                  <td style="font-weight:600;padding:10px 16px;">Kab. Langkat</td>
+                </tr>
+                <tr>
+                  <td style="padding:10px 16px;"><span style="display:inline-block;background:#1e6b1e;color:#fff;border-radius:4px;font-size:10px;font-weight:700;padding:2px 7px;margin-right:6px;">B</span><span style="color:#777;">Barat</span></td>
+                  <td style="font-weight:600;padding:10px 16px;">Kab. Langkat</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== PETA DESA ===== -->
+    <div class="panel panel-default" style="border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:28px;">
+      <div class="panel-heading" style="background:#1e6b1e;color:#fff;font-size:15px;font-weight:700;padding:13px 20px;">
+        <span class="glyphicon glyphicon-map-marker" style="margin-right:8px;color:#f0a500;"></span>Peta Lokasi Desa Sei Bamban
+      </div>
+      <div class="panel-body" style="padding:0;">
+        <iframe
+          src="https://maps.google.com/maps?q=Desa+Sei+Bamban+Batang+Serangan+Langkat&output=embed"
+          width="100%" height="320" frameborder="0" style="border:0;display:block;"
+          allowfullscreen loading="lazy">
+        </iframe>
+        <div style="padding:12px 16px;background:#f9fdf9;border-top:1px solid #e0ece0;font-size:12.5px;color:#777;">
+          <span class="glyphicon glyphicon-map-marker" style="color:#1e6b1e;margin-right:5px;"></span>
+          Jl. Besar Batang Serangan, Dusun Titi Belanga, Sei Bamban, Langkat &mdash; 20883
+          &nbsp;|&nbsp;
+          <a href="https://seibamban.id/peta" target="_blank" style="color:#1e6b1e;font-weight:600;">Lihat Peta Desa &raquo;</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  
+  <!-- ===== FOOTER ===== -->
+  <div class="footer-bar">
+    &copy; 2025 Pemerintah Desa Sei Bamban &mdash; Kecamatan Batang Serangan, Kabupaten Langkat, Sumatera Utara
+    &nbsp;|&nbsp;
+    <a href="https://seibamban.id" target="_blank">seibamban.id</a>
+  </div>
+
+  <script src="bootstrap/js/jQuery.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
