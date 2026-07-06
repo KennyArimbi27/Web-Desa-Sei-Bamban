@@ -3,262 +3,248 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Berita - Website Resmi Desa Sei Bamban</title>
+  <title>Galeri - Website Resmi Desa Sei Bamban</title>
+
   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-      html, body { height: 100%; }
-      body {
-        padding-top: 70px;
-        background: #f5f5f5;
-        font-family: Arial, sans-serif;
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-        overflow-x: hidden;
-      }
-      .container { flex: 1 0 auto; width: 100%; }
-      img { max-width: 100%; height: auto; }
 
-      /* ===== NAVBAR ===== */
-      .navbar-desa {
-        background: #1e6b1e;
-        border: none;
-        border-bottom: 3px solid #f0a500;
-        margin-bottom: 0;
-        min-height: 55px;
-      }
+  <style>
+    :root {
+      --page-color: #2e8b2e;
+    }
 
-      .navbar-desa .navbar-brand {
-        color: #fff !important;
-        font-size: 15px;
-        font-weight: 700;
-        padding: 8px 15px;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        height: 55px;
-      }
+    html, body {
+      height: 100%;
+    }
 
-      .navbar-desa .navbar-brand img {
-        width: 38px;
-        height: 38px;
-        object-fit: contain;
-        border-radius: 50%;
-        background: #fff;
-        padding: 2px;
-        vertical-align: middle;
-      }
+    body {
+      padding-top: 70px;
+      background: #f5f5f5;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
 
-      .navbar-desa .navbar-nav > li > a {
-        color: rgba(255,255,255,0.88) !important;
-        font-size: 12.5px;
-        font-weight: 600;
-        padding: 18px 12px;
-        height: 55px;
-        border-right: 1px solid rgba(255,255,255,0.08);
-        transition: background 0.18s;
-      }
+    .container {
+      flex: 1 0 auto;
+      width: 100%;
+    }
 
-      .navbar-desa .navbar-nav > li > a > .glyphicon {
-        margin-right: 5px;
-        font-size: 13px;
-      }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
 
-      .navbar-desa .navbar-nav > li > a:hover,
-      .navbar-desa .navbar-nav > li.active > a,
-      .navbar-desa .navbar-nav > li.active > a:focus {
-        background: #f0a500 !important;
-        color: #fff !important;
-      }
+    /* ===== NAVBAR ===== */
+    .navbar-desa {
+      background: #1e6b1e;
+      border: none;
+      border-bottom: 3px solid #f0a500;
+      margin-bottom: 0;
+      min-height: 55px;
+    }
 
-      .navbar-desa .navbar-nav > li.open > a {
-        background: #f0a500 !important;
-        color: #fff !important;
-      }
+    .navbar-desa .navbar-brand {
+      color: #fff !important;
+      font-size: 15px;
+      font-weight: 700;
+      padding: 8px 15px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      height: 55px;
+    }
 
-      /* Dropdown */
-      .navbar-desa .dropdown-menu {
-        background: #1a5c1a;
-        border: none;
-        border-top: 3px solid #f0a500;
-        border-radius: 0 0 6px 6px;
-        padding: 4px 0;
-        min-width: 210px;
-        box-shadow: 0 6px 18px rgba(0,0,0,.25);
-      }
+    .navbar-desa .navbar-brand img {
+      width: 38px;
+      height: 38px;
+      object-fit: contain;
+      border-radius: 50%;
+      background: #fff;
+      padding: 2px;
+      vertical-align: middle;
+    }
 
-      .navbar-desa .dropdown-menu > li > a {
-        color: rgba(255,255,255,.88) !important;
-        font-size: 12.5px;
-        padding: 9px 18px;
-        border-bottom: 1px solid rgba(255,255,255,.06);
-        transition: background .15s, padding-left .15s;
-      }
+    .navbar-desa .navbar-nav > li > a {
+      color: rgba(255,255,255,0.88) !important;
+      font-size: 12.5px;
+      font-weight: 600;
+      padding: 18px 12px;
+      height: 55px;
+      border-right: 1px solid rgba(255,255,255,0.08);
+      transition: background 0.18s;
+    }
 
-      .navbar-desa .dropdown-menu > li > a:hover {
-        background: #f0a500 !important;
-        color: #fff !important;
-        padding-left: 26px;
-      }
+    .navbar-desa .navbar-nav > li > a > .glyphicon {
+      margin-right: 5px;
+      font-size: 13px;
+    }
 
-      /* Mobile toggle */
-      .navbar-desa .navbar-toggle { border-color: rgba(255,255,255,.4); margin-top: 10px; }
-      .navbar-desa .navbar-toggle .icon-bar { background: #fff; }
+    .navbar-desa .navbar-nav > li > a:hover,
+    .navbar-desa .navbar-nav > li.active > a,
+    .navbar-desa .navbar-nav > li.active > a:focus {
+      background: #f0a500 !important;
+      color: #fff !important;
+    }
 
-      /* ===== PAGE HERO ===== */
-      .page-hero {
-        background: #fff;
-        border-radius: 8px;
-        padding: 50px 30px;
-        text-align: center;
-        box-shadow: 0 2px 10px rgba(0,0,0,.08);
-        border-top: 5px solid var(--page-color, #1e6b1e);
-        margin-bottom: 30px;
-      }
+    .navbar-desa .navbar-nav > li.open > a {
+      background: #f0a500 !important;
+      color: #fff !important;
+    }
 
-      .page-hero .glyphicon { font-size: 48px; color: var(--page-color, #1e6b1e); margin-bottom: 14px; display: block; }
-      .page-hero h1 { font-size: 26px; font-weight: 700; color: var(--page-color, #1e6b1e); margin-bottom: 10px; }
-      .page-hero p { font-size: 14px; color: #888; max-width: 540px; margin: 0 auto 16px; line-height: 1.8; }
+    .navbar-desa .navbar-toggle {
+      border-color: rgba(255,255,255,.4);
+      margin-top: 10px;
+    }
 
-      .breadcrumb {
-        background: #f0f7f0;
-        border-radius: 4px;
-        font-size: 12px;
-        margin-bottom: 20px;
-        padding: 8px 16px;
-      }
+    .navbar-desa .navbar-toggle .icon-bar {
+      background: #fff;
+    }
 
-      .breadcrumb > li + li::before { color: #2e8b2e; }
-      .breadcrumb > .active { color: #2e8b2e; font-weight: 600; }
+    /* ===== BREADCRUMB ===== */
+    .breadcrumb {
+      background: #f0f7f0;
+      border-radius: 4px;
+      font-size: 12px;
+      margin-bottom: 20px;
+      padding: 8px 16px;
+    }
 
-      /* ===== GALERI ===== */
-      .gallery-section {
-        background: #fff;
-        border-radius: 8px;
-        padding: 25px;
-        box-shadow: 0 2px 10px rgba(0,0,0,.08);
-        margin-bottom: 30px;
-      }
+    .breadcrumb > li + li::before {
+      color: #2e8b2e;
+    }
 
-      .gallery-item {
-        margin-bottom: 20px;
-      }
+    .breadcrumb > .active {
+      color: #2e8b2e;
+      font-weight: 600;
+    }
 
-      .gallery-thumb-wrap {
-        position: relative;
-        display: block;
-        overflow: hidden;
-        border-radius: 6px;
-        box-shadow: 0 2px 6px rgba(0,0,0,.15);
-      }
+    /* ===== GALERI ===== */
+    .gallery-section {
+      background: #fff;
+      border-radius: 8px;
+      padding: 25px;
+      box-shadow: 0 2px 10px rgba(0,0,0,.08);
+      margin-bottom: 30px;
+    }
 
-      .gallery-thumb-wrap img {
-        width: 100%;
-        height: 180px;
-        object-fit: cover;
-        display: block;
-        transition: transform .25s ease;
-      }
+    .gallery-item {
+      margin-bottom: 20px;
+    }
 
-      .gallery-thumb-wrap:hover img {
-        transform: scale(1.08);
-      }
+    .gallery-thumb-wrap {
+      position: relative;
+      display: block;
+      overflow: hidden;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,.15);
+      cursor: pointer;
+      text-decoration: none;
+      background: #ddd;
+    }
 
-      .gallery-thumb-wrap .gallery-overlay {
-        position: absolute;
-        bottom: 0; left: 0; right: 0;
-        background: linear-gradient(transparent, rgba(0,0,0,.65));
-        color: #fff;
-        font-size: 12px;
-        padding: 18px 10px 8px;
-        opacity: 0;
-        transition: opacity .25s ease;
-      }
+    .gallery-thumb-wrap:hover,
+    .gallery-thumb-wrap:focus {
+      text-decoration: none;
+    }
 
-      .gallery-thumb-wrap:hover .gallery-overlay {
-        opacity: 1;
-      }
+    .gallery-thumb-wrap img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+      transition: transform .25s ease;
+    }
 
-      .gallery-thumb-wrap .glyphicon-zoom-in {
-        position: absolute;
-        top: 10px; right: 10px;
-        color: #fff;
-        background: rgba(30,107,30,.85);
-        padding: 6px 8px;
-        border-radius: 50%;
-        font-size: 13px;
-        opacity: 0;
-        transition: opacity .25s ease;
-      }
+    .gallery-thumb-wrap:hover img {
+      transform: scale(1.08);
+    }
 
-      .gallery-thumb-wrap:hover .glyphicon-zoom-in {
-        opacity: 1;
-      }
+    .gallery-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(0,0,0,.70));
+      color: #fff;
+      font-size: 12px;
+      padding: 18px 10px 8px;
+      opacity: 0;
+      transition: opacity .25s ease;
+    }
 
-      #modalFoto .modal-content {
-        background: transparent;
-        border: none;
-        box-shadow: none;
-      }
+    .gallery-thumb-wrap:hover .gallery-overlay {
+      opacity: 1;
+    }
 
-      #modalFoto .modal-body {
-        padding: 0;
-      }
+    .gallery-thumb-wrap .glyphicon-zoom-in {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: #fff;
+      background: rgba(30,107,30,.85);
+      padding: 6px 8px;
+      border-radius: 50%;
+      font-size: 13px;
+      opacity: 0;
+      transition: opacity .25s ease;
+      z-index: 2;
+    }
 
-      #modalFoto img {
-        max-width: 100%;
-        max-height: 80vh;
-        margin: 0 auto;
-        border-radius: 6px;
-        box-shadow: 0 4px 25px rgba(0,0,0,.4);
-      }
+    .gallery-thumb-wrap:hover .glyphicon-zoom-in {
+      opacity: 1;
+    }
 
-      #modalFoto .modal-caption {
-        color: #fff;
-        text-align: center;
-        font-size: 14px;
-        margin-top: 12px;
-      }
+    /* ===== MODAL FOTO ===== */
+    #modalFoto .modal-dialog {
+      margin-top: 50px;
+      max-width: 800px;
+    }
 
-      #modalFoto .close {
-        position: absolute;
-        top: 10px; right: 20px;
-        color: #fff;
-        font-size: 32px;
-        opacity: .8;
-        text-shadow: none;
-        z-index: 10;
-      }
+    #modalFoto .modal-content {
+      background: transparent;
+      border: none;
+      box-shadow: none;
+    }
 
-      #modalFoto .close:hover { opacity: 1; }
+    #modalFoto .modal-body {
+      text-align: center;
+      padding: 10px;
+    }
 
-      /* ===== RESPONSIVE / MOBILE ===== */
-      @media (max-width: 767px) {
-        body { padding-top: 55px; }
-        .container { padding-left: 14px; padding-right: 14px; margin-top: 16px !important; }
+    #modalFoto img {
+      max-width: 100%;
+      max-height: 80vh;
+      margin: 0 auto;
+      border-radius: 6px;
+      box-shadow: 0 4px 25px rgba(0,0,0,.4);
+      display: block;
+    }
 
-        .navbar-desa .navbar-brand { font-size: 13px; padding: 6px 12px; }
-        .navbar-desa .navbar-brand span[style*="10px"] { font-size: 9px !important; }
-        .navbar-desa .navbar-nav > li > a { height: auto; padding: 12px 15px; }
-        .navbar-desa .navbar-collapse { background: #1a5c1a; }
+    #modalFoto .modal-caption {
+      color: #ddd;
+      text-align: center;
+      font-size: 14px;
+      margin-top: 10px;
+    }
 
-        .page-hero { padding: 30px 18px; }
-        .page-hero .glyphicon { font-size: 36px; }
-        .page-hero h1 { font-size: 20px; }
-        .page-hero p { font-size: 13px; }
+    #modalFoto .close {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      color: #fff;
+      font-size: 32px;
+      opacity: .9;
+      text-shadow: none;
+      z-index: 10;
+    }
 
-        .gallery-section { padding: 14px; }
-        .gallery-item { margin-bottom: 14px; }
-        .gallery-thumb-wrap img { height: 130px; }
-        /* di HP overlay & ikon zoom selalu tampil, karena tidak ada hover */
-        .gallery-thumb-wrap .gallery-overlay { opacity: 1; font-size: 10.5px; padding: 14px 8px 6px; }
-        .gallery-thumb-wrap .glyphicon-zoom-in { opacity: 1; }
+    #modalFoto .close:hover {
+      opacity: 1;
+    }
 
-        .footer-bar { font-size: 11px; padding: 14px 10px; }
-      }
-    </style>
-  <style>:root { --page-color: #2e8b2e; }
-    /* ===== FOOTER BAR ===== */
+    /* ===== FOOTER ===== */
     .footer-bar {
       background: #1a4d1a;
       color: rgba(255,255,255,.6);
@@ -269,13 +255,77 @@
       border-top: 3px solid #f0a500;
       flex-shrink: 0;
     }
-    .footer-bar a { color: rgba(255,255,255,.8); }
+
+    .footer-bar a {
+      color: rgba(255,255,255,.8);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 767px) {
+      body {
+        padding-top: 55px;
+      }
+
+      .container {
+        padding-left: 14px;
+        padding-right: 14px;
+        margin-top: 16px !important;
+      }
+
+      .navbar-desa .navbar-brand {
+        font-size: 13px;
+        padding: 6px 12px;
+      }
+
+      .navbar-desa .navbar-brand span[style*="10px"] {
+        font-size: 9px !important;
+      }
+
+      .navbar-desa .navbar-nav > li > a {
+        height: auto;
+        padding: 12px 15px;
+      }
+
+      .navbar-desa .navbar-collapse {
+        background: #1a5c1a;
+      }
+
+      .gallery-section {
+        padding: 14px;
+      }
+
+      .gallery-item {
+        margin-bottom: 14px;
+      }
+
+      .gallery-thumb-wrap img {
+        height: 130px;
+      }
+
+      .gallery-overlay {
+        opacity: 1;
+        font-size: 10.5px;
+        padding: 14px 8px 6px;
+      }
+
+      .gallery-thumb-wrap .glyphicon-zoom-in {
+        opacity: 1;
+      }
+
+      .footer-bar {
+        font-size: 11px;
+        padding: 14px 10px;
+      }
+    }
   </style>
 </head>
+
 <body>
 
+  <!-- ===== NAVBAR ===== -->
   <nav class="navbar navbar-desa navbar-fixed-top">
     <div class="container-fluid">
+
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-main" aria-expanded="false">
           <span class="sr-only">Toggle Nav</span>
@@ -283,24 +333,62 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
+
         <a class="navbar-brand" href="beranda.html">
-          <img src="Images/logo.jpg" alt="Logo"><span style="line-height:1.2"><span style="display:block;font-size:14px;font-weight:700">Desa Sei Bamban</span><span style="display:block;font-size:10px;font-weight:400;color:rgba(255,255,255,.65)">Kec. Batang Serangan, Kab. Langkat</span></span>
+          <img src="Images/logo.jpg" alt="Logo Desa">
+          <span style="line-height:1.2">
+            <span style="display:block;font-size:14px;font-weight:700">Desa Sei Bamban</span>
+            <span style="display:block;font-size:10px;font-weight:400;color:rgba(255,255,255,.65)">
+              Kec. Batang Serangan, Kab. Langkat
+            </span>
+          </span>
         </a>
       </div>
+
       <div class="collapse navbar-collapse" id="navbar-main">
         <ul class="nav navbar-nav">
-            <li><a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-            <li><a href="profil.html"><span class="glyphicon glyphicon-user"></span> Profil Desa</a></li>
-            <li><a href="infografis.html"><span class="glyphicon glyphicon-stats"></span> Infografis</a></li>
-            <li><a href="idm.html"><span class="glyphicon glyphicon-flag"></span> IDM</a></li>
-            <li class="active"><a href="galeri.html"><span class="glyphicon glyphicon-picture"></span> Galeri</a></li>
-            <li><a href="ppid.html"><span class="glyphicon glyphicon-info-sign"></span> PPID</a></li>
+          <li>
+            <a href="index.html">
+              <span class="glyphicon glyphicon-home"></span> Home
+            </a>
+          </li>
+
+          <li>
+            <a href="profil.html">
+              <span class="glyphicon glyphicon-user"></span> Profil Desa
+            </a>
+          </li>
+
+          <li>
+            <a href="infografis.html">
+              <span class="glyphicon glyphicon-stats"></span> Infografis
+            </a>
+          </li>
+
+          <li>
+            <a href="idm.html">
+              <span class="glyphicon glyphicon-flag"></span> IDM
+            </a>
+          </li>
+
+          <li class="active">
+            <a href="galeri.html">
+              <span class="glyphicon glyphicon-picture"></span> Galeri
+            </a>
+          </li>
+
+          <li>
+            <a href="ppid.html">
+              <span class="glyphicon glyphicon-info-sign"></span> PPID
+            </a>
+          </li>
         </ul>
-        
       </div>
+
     </div>
   </nav>
 
+  <!-- ===== CONTENT ===== -->
   <div class="container" style="margin-top:30px;">
 
     <ol class="breadcrumb">
@@ -312,7 +400,7 @@
       <div class="row">
 
         <div class="col-xs-6 col-sm-4 col-md-3 gallery-item">
-          <a href="Images/poto8.jpg" class="gallery-thumb-wrap" data-toggle="modal" data-target="#modalFoto" data-caption="Dokumentasi Desa Sei Bamban">
+          <a href="#" class="gallery-thumb-wrap" data-img="Images/poto8.jpg" data-caption="Foto bersama mahasiswa ITBI dengan Pegawai Kantor Desa Sei Bamban">
             <span class="glyphicon glyphicon-zoom-in"></span>
             <img src="Images/poto8.jpg" alt="Foto 1">
             <span class="gallery-overlay">Foto bersama mahasiswa ITBI dengan Pegawai Kantor Desa Sei Bamban</span>
@@ -320,7 +408,7 @@
         </div>
 
         <div class="col-xs-6 col-sm-4 col-md-3 gallery-item">
-          <a href="Images/poto2.jpg" class="gallery-thumb-wrap" data-toggle="modal" data-target="#modalFoto" data-caption="Dokumentasi foto bersama Kepala Desa beserta Kader PKK Desa Sei Bamban">
+          <a href="#" class="gallery-thumb-wrap" data-img="Images/poto2.jpg" data-caption="Dokumentasi foto bersama Kepala Desa beserta Kader PKK Desa Sei Bamban">
             <span class="glyphicon glyphicon-zoom-in"></span>
             <img src="Images/poto2.jpg" alt="Foto 2">
             <span class="gallery-overlay">Dokumentasi foto bersama Kepala Desa beserta Kader PKK Desa Sei Bamban</span>
@@ -328,7 +416,7 @@
         </div>
 
         <div class="col-xs-6 col-sm-4 col-md-3 gallery-item">
-          <a href="Images/poto1.jpg" class="gallery-thumb-wrap" data-toggle="modal" data-target="#modalFoto" data-caption="Dokumentasi Kepala Desa saat lomba di acara 17 Agustus">
+          <a href="#" class="gallery-thumb-wrap" data-img="Images/poto1.jpg" data-caption="Dokumentasi Kepala Desa saat lomba di acara 17 Agustus">
             <span class="glyphicon glyphicon-zoom-in"></span>
             <img src="Images/poto1.jpg" alt="Foto 3">
             <span class="gallery-overlay">Dokumentasi Kepala Desa saat lomba di acara 17 Agustus</span>
@@ -336,7 +424,7 @@
         </div>
 
         <div class="col-xs-6 col-sm-4 col-md-3 gallery-item">
-          <a href="Images/poto5.jpg" class="gallery-thumb-wrap" data-toggle="modal" data-target="#modalFoto" data-caption="Dokumentasi Bantuan Beras">
+          <a href="#" class="gallery-thumb-wrap" data-img="Images/poto5.jpg" data-caption="Dokumentasi Bantuan Beras">
             <span class="glyphicon glyphicon-zoom-in"></span>
             <img src="Images/poto5.jpg" alt="Foto 4">
             <span class="gallery-overlay">Dokumentasi Bantuan Beras</span>
@@ -344,7 +432,7 @@
         </div>
 
         <div class="col-xs-6 col-sm-4 col-md-3 gallery-item">
-          <a href="Images/poto6.jpg" class="gallery-thumb-wrap" data-toggle="modal" data-target="#modalFoto" data-caption="Dokumentasi Seminar">
+          <a href="#" class="gallery-thumb-wrap" data-img="Images/poto6.jpg" data-caption="Dokumentasi Seminar">
             <span class="glyphicon glyphicon-zoom-in"></span>
             <img src="Images/poto6.jpg" alt="Foto 5">
             <span class="gallery-overlay">Dokumentasi Seminar</span>
@@ -352,7 +440,7 @@
         </div>
 
         <div class="col-xs-6 col-sm-4 col-md-3 gallery-item">
-          <a href="Images/poto7.jpg" class="gallery-thumb-wrap" data-toggle="modal" data-target="#modalFoto" data-caption="Dokumentasi Acara 17 Agustus">
+          <a href="#" class="gallery-thumb-wrap" data-img="Images/poto7.jpg" data-caption="Dokumentasi Acara 17 Agustus">
             <span class="glyphicon glyphicon-zoom-in"></span>
             <img src="Images/poto7.jpg" alt="Foto 6">
             <span class="gallery-overlay">Dokumentasi Acara 17 Agustus</span>
@@ -360,7 +448,7 @@
         </div>
 
         <div class="col-xs-6 col-sm-4 col-md-3 gallery-item">
-          <a href="Images/poto3.jpg" class="gallery-thumb-wrap" data-toggle="modal" data-target="#modalFoto" data-caption="Dokumentasi Bantuan Toilet">
+          <a href="#" class="gallery-thumb-wrap" data-img="Images/poto3.jpg" data-caption="Dokumentasi Bantuan Toilet">
             <span class="glyphicon glyphicon-zoom-in"></span>
             <img src="Images/poto3.jpg" alt="Foto 7">
             <span class="gallery-overlay">Dokumentasi Bantuan Toilet</span>
@@ -368,7 +456,7 @@
         </div>
 
         <div class="col-xs-6 col-sm-4 col-md-3 gallery-item">
-          <a href="Images/poto4.jpg" class="gallery-thumb-wrap" data-toggle="modal" data-target="#modalFoto" data-caption="Dokumentasi Bantuan Beras">
+          <a href="#" class="gallery-thumb-wrap" data-img="Images/poto4.jpg" data-caption="Dokumentasi Bantuan Beras">
             <span class="glyphicon glyphicon-zoom-in"></span>
             <img src="Images/poto4.jpg" alt="Foto 8">
             <span class="gallery-overlay">Dokumentasi Bantuan Beras</span>
@@ -376,40 +464,42 @@
         </div>
 
         <div class="col-xs-6 col-sm-4 col-md-3 gallery-item">
-          <a href="Images/puskesmas.jpg" class="gallery-thumb-wrap" data-toggle="modal" data-target="#modalFoto" data-caption="Puskesmas Desa Sei Bamban">
+          <a href="#" class="gallery-thumb-wrap" data-img="Images/puskesmas.jpg" data-caption="Puskesmas Desa Sei Bamban">
             <span class="glyphicon glyphicon-zoom-in"></span>
             <img src="Images/puskesmas.jpg" alt="Foto 9">
             <span class="gallery-overlay">Puskesmas Desa Sei Bamban</span>
           </a>
         </div>
 
-         <div class="col-xs-6 col-sm-4 col-md-3 gallery-item">
-          <a href="Images/kantordesa.jpg" class="gallery-thumb-wrap" data-toggle="modal" data-target="#modalFoto" data-caption="Kantor Desa Desa Sei Bamban">
+        <div class="col-xs-6 col-sm-4 col-md-3 gallery-item">
+          <a href="#" class="gallery-thumb-wrap" data-img="Images/kantordesa.jpg" data-caption="Kantor Desa Sei Bamban">
             <span class="glyphicon glyphicon-zoom-in"></span>
             <img src="Images/kantordesa.jpg" alt="Foto 10">
-            <span class="gallery-overlay">Kantor Desa Desa Sei Bamban</span>
+            <span class="gallery-overlay">Kantor Desa Sei Bamban</span>
           </a>
         </div>
 
-      </div><!-- /row -->
-    </div><!-- /gallery-section -->
+      </div>
+    </div>
 
-  </div><!-- /container -->
+  </div>
 
   <!-- ===== MODAL LIGHTBOX ===== -->
   <div class="modal fade" id="modalFoto" tabindex="-1" role="dialog">
-    <div class="modal-dialog" style="margin-top:50px;max-width:800px;">
+    <div class="modal-dialog">
+
       <div class="modal-content">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <div class="modal-body" style="text-align:center;padding:10px;">
-          <img id="modalImg" src="" alt="" style="max-width:100%;max-height:80vh;border-radius:6px;box-shadow:0 4px 25px rgba(0,0,0,.4);">
-          <div class="modal-caption" id="modalCaption" style="color:#ddd;text-align:center;font-size:14px;margin-top:10px;"></div>
+
+        <div class="modal-body">
+          <img id="modalImg" src="" alt="Foto Galeri">
+          <div class="modal-caption" id="modalCaption"></div>
         </div>
       </div>
+
     </div>
   </div>
 
-  
   <!-- ===== FOOTER ===== -->
   <div class="footer-bar">
     &copy; 2025 Pemerintah Desa Sei Bamban &mdash; Kecamatan Batang Serangan, Kabupaten Langkat, Sumatera Utara
@@ -419,13 +509,28 @@
 
   <script src="bootstrap/js/jQuery.js"></script>
   <script src="bootstrap/js/bootstrap.min.js"></script>
+
   <script>
-    $('#modalFoto').on('show.bs.modal', function(e) {
-      var src     = $(e.relatedTarget).attr('href');
-      var caption = $(e.relatedTarget).data('caption');
-      $('#modalImg').attr('src', src);
-      $('#modalCaption').text(caption);
+    $(document).ready(function () {
+
+      $('.gallery-thumb-wrap').on('click', function (e) {
+        e.preventDefault();
+
+        var gambar = $(this).attr('data-img');
+        var caption = $(this).attr('data-caption');
+
+        $('#modalImg').attr('src', gambar);
+        $('#modalCaption').text(caption);
+        $('#modalFoto').modal('show');
+      });
+
+      $('#modalFoto').on('hidden.bs.modal', function () {
+        $('#modalImg').attr('src', '');
+        $('#modalCaption').text('');
+      });
+
     });
   </script>
+
 </body>
 </html>
